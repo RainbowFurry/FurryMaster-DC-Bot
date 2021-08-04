@@ -12,6 +12,7 @@ import net.dv8tion.jda.api.entities.Guild;
 public class CreateDefaults {
 
     public void createDefaults(Guild guild){
+        Main.getMySql().changeDatabase("FurryMaster_" + guild.getId());
         createEnglishLanguage(guild);
         createGermanLanguage(guild);
         createChannelNames(guild);

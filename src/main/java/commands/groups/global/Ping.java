@@ -3,7 +3,6 @@ package commands.groups.global;
 import commands.Command;
 import core.CommandParser;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import utils.STATIC;
 
 import java.awt.*;
 import java.util.Date;
@@ -32,7 +31,7 @@ public class Ping implements Command {
             setInputTime(System.currentTimeMillis());
             long processing = new Date().getTime() - inputTime;
             long ping = event.getJDA().getGatewayPing();
-            CommandParser.sendMessage(event, Color.red, STATIC.TITLE +
+            CommandParser.sendMessage(event, Color.red, "Title" +
                     String.format(":ping_pong:   Pong!\n\nThe Bot takes %s milliseconds to answer.",
                             ping)
             );

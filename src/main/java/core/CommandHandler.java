@@ -1,11 +1,7 @@
 package core;
 
 import commands.Command;
-import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.Permission;
-import utils.STATIC;
 
-import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 

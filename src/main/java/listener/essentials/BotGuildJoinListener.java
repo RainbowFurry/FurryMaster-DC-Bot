@@ -24,7 +24,7 @@ public class BotGuildJoinListener extends ListenerAdapter {
         //Create SQL Entry for Guild
         Main.manageMySQL(guild);
 
-        event.getGuild().getDefaultChannel().sendMessage("");
+        event.getGuild().getDefaultChannel().sendMessage("").queue();
 
         PrivateMessageBuilder privateMessageBuilder = new PrivateMessageBuilder();
         //privateMessageBuilder.sentPrivateMessage(guild.getOwner(), "");

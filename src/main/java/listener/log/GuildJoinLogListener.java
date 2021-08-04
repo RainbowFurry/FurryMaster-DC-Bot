@@ -3,7 +3,6 @@ package listener.log;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import utils.STATIC;
 
 import java.awt.*;
 import java.util.Objects;
@@ -23,7 +22,7 @@ public class GuildJoinLogListener extends ListenerAdapter {
 
         EmbedBuilder eb = new EmbedBuilder();
         eb.setColor(Color.green);
-        eb.setDescription(STATIC.TITLE + "\n" +
+        eb.setDescription("Title" + "\n" +
                 "Welcome **" + event.getMember().getEffectiveName() + "** to **" + event.getGuild().getName() + "**.");
 
         Objects.requireNonNull(event.getGuild().getDefaultChannel()).sendMessage(eb.build()).queue();

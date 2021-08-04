@@ -2,7 +2,6 @@ package core;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import utils.STATIC;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -25,7 +24,12 @@ import java.util.Arrays;
 
     public CommandContainer parse(String raw, MessageReceivedEvent event) {
         event.getMessage().delete().queue();
-        String beheaded = raw.replaceFirst(STATIC.PREFIX, "");
+        String beheaded;
+        try{
+            beheaded = raw.replaceFirst((String) Main.getMySql().getObject(event.getGuild(), "ServerInfo", "infoID", "CommandPrefix", "infoContent"), "");
+        }catch (Exception e) {
+            beheaded = raw.replaceFirst("\\.", "");
+        }
         String[] splitBeheaded = beheaded.split(" ");
         String invoke = splitBeheaded[0];
         ArrayList<String> split = new ArrayList<>(Arrays.asList(splitBeheaded));

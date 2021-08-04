@@ -6,7 +6,7 @@ import commands.JasonJT.Test;
 import commands.groups.admin.*;
 import commands.groups.global.*;
 import commands.groups.user.Commands;
-import commands.groups.user.EmbedMessage;
+import database.BotFileManager;
 import database.sql.AsyncMySqlManager;
 import database.sql.CreateDefaults;
 import listener.essentials.*;
@@ -14,15 +14,11 @@ import listener.essentials.*;
 import listener.module.JoinRoleListener;
 import listener.module.SentJoinMessageListener;
 import listener.module.SentLeaveMessageListener;
-import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.entities.Guild;
-
-import utils.SECRETS;
-import utils.STATIC;
 
 import java.util.logging.Logger;
 
@@ -38,10 +34,11 @@ public class Main {
     private static Logger logger;
     private static JDABuilder builder;
     private static AsyncMySqlManager mySql;
+    private static BotFileManager botFileManager;
 
     /* Start/Execute Bot */
     public static void main(String[] args) throws Throwable {
-
+        botFileManager = new BotFileManager();
         logger = Logger.getGlobal();
         System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s %n");
 
@@ -49,12 +46,11 @@ public class Main {
         startMySQL();
 
         //Set up defaults
-        builder = new JDABuilder(AccountType.BOT);
-        builder.setToken(SECRETS.TOKEN);
+        builder = JDABuilder.createDefault(botFileManager.getToken());
         builder.setAutoReconnect(true);
 
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setActivity(Activity.of(Activity.ActivityType.DEFAULT, STATIC.GAME));
+        builder.setActivity(Activity.of(botFileManager.getActivityType(), botFileManager.getActivityText()));
 
         jda = builder.build();
 
@@ -218,4 +214,7 @@ public class Main {
         return logger;
     }
 
+    public static BotFileManager getBotFileManager() {
+        return botFileManager;
+    }
 }

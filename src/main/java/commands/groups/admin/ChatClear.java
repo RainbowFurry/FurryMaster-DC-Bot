@@ -5,7 +5,6 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageHistory;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import utils.STATIC;
 
 import java.awt.*;
 import java.util.List;
@@ -43,7 +42,7 @@ public class ChatClear implements Command {
                 List<Message> messages = history.retrievePast(amount + 1).complete();
                 event.getTextChannel().deleteMessages(messages).queue();
 
-                final Message message = event.getTextChannel().sendMessage(new EmbedBuilder().setColor(Color.GREEN).addField(STATIC.TITLE, ":wastebasket: All Messages has been deleted", false).build()).complete();
+                final Message message = event.getTextChannel().sendMessage(new EmbedBuilder().setColor(Color.GREEN).addField("Title", ":wastebasket: All Messages has been deleted", false).build()).complete();
                 new Timer().schedule(new TimerTask() {
                     @Override
                     public void run() {

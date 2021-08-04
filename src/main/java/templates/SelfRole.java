@@ -1,9 +1,13 @@
 package templates;
 
 import builder.CustomEmbedBuilder;
+import com.vdurmont.emoji.EmojiParser;
 import core.Main;
 import manager.Checker;
+import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.entities.Emote;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.internal.requests.Route;
 
 import java.awt.*;
 
@@ -28,9 +32,9 @@ public class SelfRole {
                 ":joy: **Other**");
 
         event.getTextChannel().sendMessage(embedBuilder.build()).queue(message -> {
-            message.addReaction("🚹").queue();
-            message.addReaction("🚺").queue();
-            message.addReaction("💚").queue();
+            message.addReaction(EmojiParser.parseToUnicode(":mens:")).queue();
+            message.addReaction(EmojiParser.parseToUnicode(":womens:")).queue();
+            message.addReaction(EmojiParser.parseToUnicode(":green_heart:")).queue();
         });
 
     }

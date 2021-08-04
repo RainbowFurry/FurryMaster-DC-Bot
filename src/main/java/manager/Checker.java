@@ -38,7 +38,7 @@ public class Checker {
     public static String checkServerLanguage(Guild guild){
         String Language = (String) Main.getMySql().getObject(guild , "ServerOptions", "OptionName", "ServerLanguage", "OptionState");
         if(serverLanguage.containsKey(guild)){
-            if(serverLanguage.get(guild) != Language){
+            if(!serverLanguage.get(guild).equals(Language)){
                 serverLanguage.remove(guild);
                 serverLanguage.put(guild, "Language_" + Language);
             }

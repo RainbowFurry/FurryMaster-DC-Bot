@@ -3,7 +3,6 @@ package commands.groups.admin;
 import commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import utils.STATIC;
 
 import java.awt.*;
 
@@ -54,7 +53,7 @@ public class UserInfo implements Command {
             eb.setFooter(event.getAuthor().getName() + " " + event.getMember().getRoles().get(0).getName(), event.getAuthor().getAvatarUrl());
             eb.setDescription(
 
-                    STATIC.TITLE + "\n" +
+                    "Title" + "\n" +
 
                             "Name:\n" + event.getGuild().getMember(event.getMessage().getMentionedUsers().get(0)).getUser().getName() + "\n\n"
 

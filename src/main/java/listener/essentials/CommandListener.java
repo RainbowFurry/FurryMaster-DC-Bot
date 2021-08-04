@@ -1,10 +1,10 @@
 package listener.essentials;
 
 import core.CommandHandler;
+import core.Main;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import utils.STATIC;
 
 /**
  * @author DarkSide_Wolf
@@ -24,7 +24,14 @@ public class CommandListener extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
         guild = event.getGuild();
-        String prefix = STATIC.PREFIX;
+        String prefix;
+        try {
+            prefix = (String) Main.getMySql().getObject(event.getGuild(), "ServerInfo", "infoID", "CommandPrefix", "infoContent");
+        }catch (Exception e) {
+            prefix = ".";
+        }
+        if(prefix == null)
+            prefix = ".";
         if(event.getMessage().getContentRaw().startsWith(prefix) && !event.getMessage().getAuthor().getId().equals(event.getJDA().getSelfUser().getId())) {
             try {
                 commandHandler1.handleCommand(CommandHandler.parse.parse(event.getMessage().getContentRaw(), event));

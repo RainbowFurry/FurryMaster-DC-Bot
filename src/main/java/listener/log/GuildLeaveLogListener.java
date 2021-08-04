@@ -4,7 +4,6 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.PrivateChannel;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberLeaveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import utils.STATIC;
 
 import java.awt.*;
 
@@ -23,7 +22,7 @@ public class GuildLeaveLogListener extends ListenerAdapter {
 
         EmbedBuilder eb1 = new EmbedBuilder();
         eb1.setColor(Color.green);
-        eb1.setDescription(STATIC.TITLE +
+        eb1.setDescription("Title" +
                 "Sad that you **" + event.getMember().getNickname() + "** leave us on **" + event.getGuild().getName() + "**!"
                 + "We hope you come back soon");
 

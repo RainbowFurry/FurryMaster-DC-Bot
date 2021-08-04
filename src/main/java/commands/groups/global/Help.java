@@ -2,11 +2,7 @@ package commands.groups.global;
 
 import builder.CustomEmbedBuilder;
 import commands.Command;
-import core.Main;
-import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import utils.STATIC;
 
 import java.awt.*;
 
