@@ -1,0 +1,78 @@
+ToDo:
+backup bot git
+(String) Main.getMySql().getObject(commandListener.guild , "Settings", "messageName", "UserBot", "messageContent")
+//member = guilde
+//user = account
+----------------------------------------------
+
+Today:
+Role Template - create all
+Channel Template - create all
+selfrole create all
+
+create user dbs for user already on server... + new
+create emoji db
+
+self role FERTIG + create Roles + protect no other emote + singele/multiple
+show logs
+
+//command delete/create userDB @mention?
+//delete/Create commands single/all
+
+---------------------------------------------
+Else:
+show stats
+create channels - setup
+create roles - setup
+exeption log - own server?
+
+all commands
+all listener
+
+channelbuilder
+check... api
+
+NSFW default channel create
+--------------------------------------
+Commands:
+music - auto join music channel option true/false, Channelname, ...
+vote
+report system
+roles: single permission roles?
+nick - autocheck/selfcheck/einfach so
+google/yt
+rainbow rank - rainbow, gay, bi, custom
+
+Chat Filer system
+kick/ban - command
+warn system - Spam, custom, etc...
+mute system
+giveaway
+level system
+Auto Clean -> halte channel sauber und lösche inhalt alle xyz?
+setup
+
+manual verification/auto verification/none -> verification 18+ for nsfw?
+role selection - selfrole 1 oder category channel?
+
+verify -> add roles...
+pw protect - unlock channel
+nick force - real name
+
+age verification...
+
+fallback command prefix
+private join/leave message
+---------------------
+SETUP = Install/Edit ModulName ...
+
+1 Command instand setup all... defaults
+schau alle anderen bots...
+
+ALLES ZWISCHENSPEICHERN/HASHEN...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+role perm
+0 none
+1 user
+2 mode
+3 admin
