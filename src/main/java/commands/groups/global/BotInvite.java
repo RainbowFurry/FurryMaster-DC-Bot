@@ -27,7 +27,7 @@ public class BotInvite implements Command {
         CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
         embedBuilder.setEmbedColor(Color.green);
         embedBuilder.setTitle("You want to Invite the Bot to your Server?");
-        embedBuilder.setContent("https://BotInviteLink.de");
+        embedBuilder.setContent("https://discord.com/api/oauth2/authorize?client_id=871409125521772596&permissions=8&scope=bot");
 
         PrivateMessageBuilder privateMessageBuilder = new PrivateMessageBuilder();
         privateMessageBuilder.sentPrivateMessage(event.getMember(), embedBuilder.build());

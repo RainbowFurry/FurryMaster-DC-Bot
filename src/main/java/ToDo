@@ -12,8 +12,9 @@ selfrole create all
 
 create user dbs for user already on server... + new
 create emoji db
+prefix binding
 
-self role FERTIG + create Roles + protect no other emote + singele/multiple
+self role FERTIG + create Roles + protect singele/multiple
 show logs
 
 //command delete/create userDB @mention?
@@ -63,6 +64,8 @@ age verification...
 
 fallback command prefix
 private join/leave message
+bot exeptions in meinen Server - logfile - sout
+if db not exist - weil bot restart beim join sicherung...
 ---------------------
 SETUP = Install/Edit ModulName ...
 
