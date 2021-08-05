@@ -6,6 +6,7 @@ import commands.JasonJT.Test;
 import commands.groups.admin.*;
 import commands.groups.global.*;
 import commands.groups.user.Commands;
+import commands.music.Music;
 import database.BotFileManager;
 import database.sql.AsyncMySqlManager;
 import database.sql.CreateDefaults;
@@ -91,11 +92,7 @@ public class Main {
         CommandHandler.commandMap.put("commands", new Commands());//Commands Command - List all Bot Commands (Permission based)
 
         /* Music */
-        //CommandHandler.commandMap.put("pause", new Pause());
-        //CommandHandler.commandMap.put("play", new Play());
-        //CommandHandler.commandMap.put("resume", new Resume());
-        //CommandHandler.commandMap.put("stop", new Stop());
-        //CommandHandler.commandMap.put("volume", new Volume());
+        CommandHandler.commandMap.put("music", new Music());
 
         System.out.println("FurryMaster: All Commands has been registrated");
 

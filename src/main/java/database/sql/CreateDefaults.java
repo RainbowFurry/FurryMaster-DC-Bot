@@ -56,7 +56,7 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "ServerInfo", "infoID", "Tags", "infoID,infoContent", "'Tags' , '-'");
         Main.getMySql().insertInto(guild , "ServerInfo", "infoID", "Votes", "infoID,infoContent", "'Votes' , '-'");
         Main.getMySql().insertInto(guild , "ServerInfo", "infoID", "License", "infoID,infoContent", "'License' , '-'");
-
+        Main.getMySql().insertInto(guild , "ServerInfo", "infoID", "BotVolume", "infoID,infoContent", "'BotVolume' , '50'");
     }
 
     //
@@ -96,6 +96,11 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "TotalChannelStats", "ChannelID,ChannelName", "'TotalChannelStats' , 'Total Channels: {amount}'");
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "TotalRolesStats", "ChannelID,ChannelName", "'TotalRolesStats' , 'Total Roles: {amount}'");
 
+        /*
+        Music Channel
+         */
+        Main.getMySql().insertInto(guild , "Channels", "ChannelID", "MusicChannel", "ChannelID,ChannelName", "'MusicChannel' , 'Music'");
+        Main.getMySql().insertInto(guild , "Channels", "ChannelID", "MusicTextChannel", "ChannelID,ChannelName", "'MusicTextChannel' , 'Music - Control'");
     }
 
     public void createRoles(Guild guild){
