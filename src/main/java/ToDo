@@ -9,6 +9,7 @@ Today:
 Role Template - create all
 Channel Template - create all
 selfrole create all
+db in config
 
 create user dbs for user already on server... + new
 create emoji db
@@ -55,6 +56,8 @@ level system
 Auto Clean -> halte channel sauber und lösche inhalt alle xyz?
 setup
 
+check all commands/listener if channel and permissions etc. right
+
 manual verification/auto verification/none -> verification 18+ for nsfw?
 role selection - selfrole 1 oder category channel?
 
@@ -81,3 +84,8 @@ role perm
 1 user
 2 mode
 3 admin
+
+setup:
+SereverInfo: ...
+Server: Roles, Channeks, etc
+Bot: Modules, language, etc

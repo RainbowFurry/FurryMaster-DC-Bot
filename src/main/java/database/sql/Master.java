@@ -39,24 +39,36 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'ReactionRole_Gender_Male' , 'Mann'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Female", "messageName,messageContent", "'ReactionRole_Gender_Female' , 'Frau'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Divers", "messageName,messageContent", "'ReactionRole_Gender_Divers' , 'Divers'");
-
         /*Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");*/
-
 
         /* Age */
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Age_Heading", "messageName,messageContent", "'ReactionRole_Age_Heading' , 'Alters Rollen'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Age_13-15", "messageName,messageContent", "'ReactionRole_Age_13-15' , '13-15'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Age_16-17", "messageName,messageContent", "'ReactionRole_Age_16-17' , '16-17'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Age_18+", "messageName,messageContent", "'ReactionRole_Age_18+' , '18+'");
-
         /*Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");*/
+
+        /* Animal */
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Wolf", "messageName,messageContent", "'ReactionRole_Animal_Wolf' , 'Wolf'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Dog", "messageName,messageContent", "'ReactionRole_Animal_Dog' , 'Hund'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Cat", "messageName,messageContent", "'ReactionRole_Animal_Cat' , 'Katze'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Rabbit", "messageName,messageContent", "'ReactionRole_Animal_Rabbit' , 'Hase'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Fox", "messageName,messageContent", "'ReactionRole_Animal_Fox' , 'Fuchs'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Bear", "messageName,messageContent", "'ReactionRole_Animal_Bear' , 'Bär'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Tiger", "messageName,messageContent", "'ReactionRole_Animal_Tiger' , 'Tiger'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Lion", "messageName,messageContent", "'ReactionRole_Animal_Lion' , 'Löwe'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Kangaroo", "messageName,messageContent", "'ReactionRole_Animal_Kangaroo' , 'Känguru'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Giraffe", "messageName,messageContent", "'ReactionRole_Animal_Giraffe' , 'Giraffe'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Monkey", "messageName,messageContent", "'ReactionRole_Animal_Monkey' , 'Affe'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Koala", "messageName,messageContent", "'ReactionRole_Animal_Koala' , 'Koala Bär'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Horse", "messageName,messageContent", "'ReactionRole_Animal_Horse' , 'Pferd'");
 
         /* Color */
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Color_Heading", "messageName,messageContent", "'ReactionRole_Color_Heading' , 'Farb Rollen'");
@@ -69,7 +81,6 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Color_Pink", "messageName,messageContent", "'ReactionRole_Color_Pink' , 'Pink'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Color_Cyan", "messageName,messageContent", "'ReactionRole_Color_Cyan' , 'Cyan'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Color_Brown", "messageName,messageContent", "'ReactionRole_Color_Brown' , 'Brown'");
-
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Color_Light", "messageName,messageContent", "'ReactionRole_Color_Light' , 'Hell'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Color_Dark", "messageName,messageContent", "'ReactionRole_Color_Dark' , 'Dunkel'");
 
@@ -82,19 +93,49 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Country_Italy", "messageName,messageContent", "'ReactionRole_Country_Italy' , 'Italien'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Country_Russia", "messageName,messageContent", "'ReactionRole_Country_Russia' , 'Russland'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Country_Swiz", "messageName,messageContent", "'ReactionRole_Country_Swiz' , 'Schweiz'");
-        //Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
 
         /* GameCategory */
-        //
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_GameCategory_Action", "messageName,messageContent", "'ReactionRole_GameCategory_Action' , 'Action'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_GameCategory_Action-Adventure", "messageName,messageContent", "'ReactionRole_GameCategory_Action-Adventure' , 'Action und Abenteuer'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_GameCategory_Adventure", "messageName,messageContent", "'ReactionRole_GameCategory_Adventure' , 'Abenteuer'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_GameCategory_RolePlay", "messageName,messageContent", "'ReactionRole_GameCategory_RolePlay' , 'Rollen Spiel'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_GameCategory_Simulation", "messageName,messageContent", "'ReactionRole_GameCategory_Simulation' , 'Simulation'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_GameCategory_Strategy", "messageName,messageContent", "'ReactionRole_GameCategory_Strategy' , 'Strategie'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_GameCategory_Sport", "messageName,messageContent", "'ReactionRole_GameCategory_Sport' , 'Sport'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_GameCategory_Puzzle", "messageName,messageContent", "'ReactionRole_GameCategory_Puzzle' , 'Rätsel'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_GameCategory_Idle", "messageName,messageContent", "'ReactionRole_GameCategory_Idle' , 'Untätig'");
 
         /* Games */
-        //
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Game_Minecraft", "messageName,messageContent", "'ReactionRole_Game_Minecraft' , 'Minecraft'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Game_Battlefield", "messageName,messageContent", "'ReactionRole_Game_Battlefield' , 'Battlefield'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Game_CallOfDuty", "messageName,messageContent", "'ReactionRole_Game_CallOfDuty' , 'Call of Duty'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Game_CounterStrike", "messageName,messageContent", "'ReactionRole_Game_CounterStrike' , 'Counter Strike'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Game_DeadByDaylight", "messageName,messageContent", "'ReactionRole_Game_DeadByDaylight' , 'Dead by Daylight'");
 
         /* Movie */
-        //
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Movie_Action", "messageName,messageContent", "'ReactionRole_Movie_Action' , 'Aktion'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Movie_Comedy", "messageName,messageContent", "'ReactionRole_Movie_Comedy' , 'Kommödie'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Movie_Drama", "messageName,messageContent", "'ReactionRole_Movie_Drama' , 'Drama'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Movie_Horror", "messageName,messageContent", "'ReactionRole_Movie_Horror' , 'Horror'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Movie_Fantasy", "messageName,messageContent", "'ReactionRole_Movie_Fantasy' , 'Fantasie'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Movie_Mystery", "messageName,messageContent", "'ReactionRole_Movie_Mystery' , 'Mysterie'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Movie_Romance", "messageName,messageContent", "'ReactionRole_Movie_Romance' , 'Romantik'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Movie_Thriller", "messageName,messageContent", "'ReactionRole_Movie_Thriller' , 'Thriller'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Movie_Western", "messageName,messageContent", "'ReactionRole_Movie_Western' , 'Western'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Movie_Series", "messageName,messageContent", "'ReactionRole_Movie_Series' , 'Serien'");
 
         /* Music */
-        //
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_Country", "messageName,messageContent", "'ReactionRole_Music_Country' , 'Country'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_Electronic", "messageName,messageContent", "'ReactionRole_Music_Electronic' , 'Elektro'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_Funk", "messageName,messageContent", "'ReactionRole_Music_Funk' , 'Funk'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_HipHop", "messageName,messageContent", "'ReactionRole_Music_HipHop' , 'Hip Hop'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_Jazz", "messageName,messageContent", "'ReactionRole_Music_Jazz' , 'Jazz'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_Pop", "messageName,messageContent", "'ReactionRole_Music_Pop' , 'Pop'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_Punk", "messageName,messageContent", "'ReactionRole_Music_Punk' , 'Punk'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_Rock", "messageName,messageContent", "'ReactionRole_Music_Rock' , 'Rock'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_Reggae", "messageName,messageContent", "'ReactionRole_Music_Reggae' , 'Reggae'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_Metal", "messageName,messageContent", "'ReactionRole_Music_Metal' , 'Metal'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Music_Tradition", "messageName,messageContent", "'ReactionRole_Music_Tradition' , 'Volks Musik'");
 
         /* Pronouns */
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Pronouns_Heading", "messageName,messageContent", "'ReactionRole_Pronouns_Heading' , 'Ansprache Rollen'");
@@ -127,6 +168,35 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_StarSign_Libra", "messageName,messageContent", "'ReactionRole_StarSign_Libra' , 'Waage'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_StarSign_Scorpio", "messageName,messageContent", "'ReactionRole_StarSign_Scorpio' , 'Skorpion'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_StarSign_Sagittarius", "messageName,messageContent", "'ReactionRole_StarSign_Sagittarius' , 'Schütze'");
+
+        /* Job */
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Jobs_IT", "messageName,messageContent", "'ReactionRole_Jobs_IT' , 'IT'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Jobs_Army", "messageName,messageContent", "'ReactionRole_Jobs_Army' , 'Bundeswehr'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Jobs_Medic", "messageName,messageContent", "'ReactionRole_Jobs_Medic' , 'Mediziener'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Jobs_Educator", "messageName,messageContent", "'ReactionRole_Jobs_Educator' , 'Erzieher'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Jobs_Caregiver", "messageName,messageContent", "'ReactionRole_Jobs_Caregiver' , 'Pfleger'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Jobs_Social", "messageName,messageContent", "'ReactionRole_Jobs_Social' , 'Sozial'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Jobs_Banker", "messageName,messageContent", "'ReactionRole_Jobs_Banker' , 'Bänker'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Jobs_Ingenuer", "messageName,messageContent", "'ReactionRole_Jobs_Ingenuer' , 'Ingenuer'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Jobs_Mechanic", "messageName,messageContent", "'ReactionRole_Jobs_Mechanic' , 'Mechaniker'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Jobs_Seller", "messageName,messageContent", "'ReactionRole_Jobs_Seller' , 'Verkäufer'");
+
+        /* Hobby */
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Hobby_Draw", "messageName,messageContent", "'ReactionRole_Hobby_Draw' , 'malen'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Hobby_MeetUp", "messageName,messageContent", "'ReactionRole_Hobby_MeetUp' , 'Freunde treffen'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Hobby_Gaming", "messageName,messageContent", "'ReactionRole_Hobby_Gaming' , 'zocken'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Hobby_WatchTV", "messageName,messageContent", "'ReactionRole_Hobby_WatchTV' , 'fern sehen'");
+
+        /* Sport */
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Sport_Swim", "messageName,messageContent", "'ReactionRole_Sport_Swim' , 'Schwimmen'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Sport_Dance", "messageName,messageContent", "'ReactionRole_Sport_Dance' , 'Tanzen'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Sport_Climb", "messageName,messageContent", "'ReactionRole_Sport_Climb' , 'Klettern'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Sport_Football", "messageName,messageContent", "'ReactionRole_Sport_Football' , 'Fußball'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Sport_Baseball", "messageName,messageContent", "'ReactionRole_Sport_Baseball' , 'Baseball'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Sport_Basketball", "messageName,messageContent", "'ReactionRole_Sport_Basketball' , 'Basketball'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Sport_Hockey", "messageName,messageContent", "'ReactionRole_Sport_Hockey' , 'Hockey'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Sport_Gun", "messageName,messageContent", "'ReactionRole_Sport_Gun' , 'Schützen Sport'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Sport_Fight", "messageName,messageContent", "'ReactionRole_Sport_Fight' , 'Kampf Sport'");
 
         /* Other */
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "SingleSelection", "messageName,messageContent", "'SingleSelection' , 'Du kannst nur eines auswählen'");
@@ -172,24 +242,36 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'ReactionRole_Gender_Male' , 'Man'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Gender_Female", "messageName,messageContent", "'ReactionRole_Gender_Female' , 'Woman'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Gender_Divers", "messageName,messageContent", "'ReactionRole_Gender_Divers' , 'Divers'");
-
         /*Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");*/
-
 
         /* Age */
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Age_Heading", "messageName,messageContent", "'ReactionRole_Age_Heading' , 'Age Roles'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Age_13-15", "messageName,messageContent", "'ReactionRole_Age_13-15' , '13-15'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Age_16-17", "messageName,messageContent", "'ReactionRole_Age_16-17' , '16-17'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Age_18+", "messageName,messageContent", "'ReactionRole_Age_18+' , '18+'");
-
         /*Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");*/
+
+        /* Animal */
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Wolf", "messageName,messageContent", "'ReactionRole_Animal_Wolf' , 'Wolf'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Dog", "messageName,messageContent", "'ReactionRole_Animal_Dog' , 'Dog'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Cat", "messageName,messageContent", "'ReactionRole_Animal_Cat' , 'Cat'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Rabbit", "messageName,messageContent", "'ReactionRole_Animal_Rabbit' , 'Rabbit'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Fox", "messageName,messageContent", "'ReactionRole_Animal_Fox' , 'Fox'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Bear", "messageName,messageContent", "'ReactionRole_Animal_Bear' , 'Bear'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Tiger", "messageName,messageContent", "'ReactionRole_Animal_Tiger' , 'Tiger'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Lion", "messageName,messageContent", "'ReactionRole_Animal_Lion' , 'Lion'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Kangaroo", "messageName,messageContent", "'ReactionRole_Animal_Kangaroo' , 'Kangaroo'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Giraffe", "messageName,messageContent", "'ReactionRole_Animal_Giraffe' , 'Giraffe'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Monkey", "messageName,messageContent", "'ReactionRole_Animal_Monkey' , 'Monkey'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Koala", "messageName,messageContent", "'ReactionRole_Animal_Koala' , 'Koala Bear'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Horse", "messageName,messageContent", "'ReactionRole_Animal_Horse' , 'Horse'");
 
         /* Color */
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Color_Heading", "messageName,messageContent", "'ReactionRole_Color_Heading' , 'Color Roles'");
@@ -202,7 +284,6 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Color_Pink", "messageName,messageContent", "'ReactionRole_Color_Pink' , 'Pink'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Color_Cyan", "messageName,messageContent", "'ReactionRole_Color_Cyan' , 'Cyan'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Color_Brown", "messageName,messageContent", "'ReactionRole_Color_Brown' , 'Brown'");
-
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Color_Light", "messageName,messageContent", "'ReactionRole_Color_Light' , 'Light'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Color_Dark", "messageName,messageContent", "'ReactionRole_Color_Dark' , 'Dark'");
 
@@ -215,19 +296,49 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Country_Italy", "messageName,messageContent", "'ReactionRole_Country_Italy' , 'Italy'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Country_Russia", "messageName,messageContent", "'ReactionRole_Country_Russia' , 'Russia'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Country_Swiz", "messageName,messageContent", "'ReactionRole_Country_Swiz' , 'Switzerland'");
-        //Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
 
         /* GameCategory */
-        //
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_GameCategory_Action", "messageName,messageContent", "'ReactionRole_GameCategory_Action' , 'Action'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_GameCategory_Action-Adventure", "messageName,messageContent", "'ReactionRole_GameCategory_Action-Adventure' , 'Action and Adventure'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_GameCategory_Adventure", "messageName,messageContent", "'ReactionRole_GameCategory_Adventure' , 'Adventure'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_GameCategory_RolePlay", "messageName,messageContent", "'ReactionRole_GameCategory_RolePlay' , 'Role Play'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_GameCategory_Simulation", "messageName,messageContent", "'ReactionRole_GameCategory_Simulation' , 'Simulation'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_GameCategory_Strategy", "messageName,messageContent", "'ReactionRole_GameCategory_Strategy' , 'Strategy'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_GameCategory_Sport", "messageName,messageContent", "'ReactionRole_GameCategory_Sport' , 'Sport'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_GameCategory_Puzzle", "messageName,messageContent", "'ReactionRole_GameCategory_Puzzle' , 'Puzzle'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_GameCategory_Idle", "messageName,messageContent", "'ReactionRole_GameCategory_Idle' , 'Idle'");
 
         /* Games */
-        //
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Game_Minecraft", "messageName,messageContent", "'ReactionRole_Game_Minecraft' , 'Minecraft'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Game_Battlefield", "messageName,messageContent", "'ReactionRole_Game_Battlefield' , 'Battlefield'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Game_CallOfDuty", "messageName,messageContent", "'ReactionRole_Game_CallOfDuty' , 'Call of Duty'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Game_CounterStrike", "messageName,messageContent", "'ReactionRole_Game_CounterStrike' , 'Counter Strike'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Game_DeadByDaylight", "messageName,messageContent", "'ReactionRole_Game_DeadByDaylight' , 'Dead by Daylight'");
 
         /* Movie */
-        //
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Movie_Action", "messageName,messageContent", "'ReactionRole_Movie_Action' , 'Action'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Movie_Comedy", "messageName,messageContent", "'ReactionRole_Movie_Comedy' , 'Comedy'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Movie_Drama", "messageName,messageContent", "'ReactionRole_Movie_Drama' , 'Drama'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Movie_Horror", "messageName,messageContent", "'ReactionRole_Movie_Horror' , 'Horror'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Movie_Fantasy", "messageName,messageContent", "'ReactionRole_Movie_Fantasy' , 'Fantasy'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Movie_Mystery", "messageName,messageContent", "'ReactionRole_Movie_Mystery' , 'Mystery'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Movie_Romance", "messageName,messageContent", "'ReactionRole_Movie_Romance' , 'Romance'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Movie_Thriller", "messageName,messageContent", "'ReactionRole_Movie_Thriller' , 'Thriller'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Movie_Western", "messageName,messageContent", "'ReactionRole_Movie_Western' , 'Western'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Movie_Series", "messageName,messageContent", "'ReactionRole_Movie_Series' , 'Series'");
 
         /* Music */
-        //
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_Country", "messageName,messageContent", "'ReactionRole_Music_Country' , 'Country'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_Electronic", "messageName,messageContent", "'ReactionRole_Music_Electronic' , 'Elektro'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_Funk", "messageName,messageContent", "'ReactionRole_Music_Funk' , 'Funk'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_HipHop", "messageName,messageContent", "'ReactionRole_Music_HipHop' , 'Hip Hop'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_Jazz", "messageName,messageContent", "'ReactionRole_Music_Jazz' , 'Jazz'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_Pop", "messageName,messageContent", "'ReactionRole_Music_Pop' , 'Pop'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_Punk", "messageName,messageContent", "'ReactionRole_Music_Punk' , 'Punk'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_Rock", "messageName,messageContent", "'ReactionRole_Music_Rock' , 'Rock'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_Reggae", "messageName,messageContent", "'ReactionRole_Music_Reggae' , 'Reggae'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_Metal", "messageName,messageContent", "'ReactionRole_Music_Metal' , 'Metal'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Music_Tradition", "messageName,messageContent", "'ReactionRole_Music_Tradition' , 'Tradition'");
 
         /* Pronouns */
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Pronouns_Heading", "messageName,messageContent", "'ReactionRole_Pronouns_Heading' , 'Pronounsment Roles'");
@@ -261,6 +372,35 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_StarSign_Scorpio", "messageName,messageContent", "'ReactionRole_StarSign_Scorpio' , 'Scorpio'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_StarSign_Sagittarius", "messageName,messageContent", "'ReactionRole_StarSign_Sagittarius' , 'Sagittarius'");
 
+        /* Job */
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Jobs_IT", "messageName,messageContent", "'ReactionRole_Jobs_IT' , 'IT'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Jobs_Army", "messageName,messageContent", "'ReactionRole_Jobs_Army' , 'Army'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Jobs_Medic", "messageName,messageContent", "'ReactionRole_Jobs_Medic' , 'Medical'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Jobs_Educator", "messageName,messageContent", "'ReactionRole_Jobs_Educator' , 'Educator'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Jobs_Caregiver", "messageName,messageContent", "'ReactionRole_Jobs_Caregiver' , 'Caregiver'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Jobs_Social", "messageName,messageContent", "'ReactionRole_Jobs_Social' , 'Social'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Jobs_Banker", "messageName,messageContent", "'ReactionRole_Jobs_Banker' , 'Banker'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Jobs_Ingenuer", "messageName,messageContent", "'ReactionRole_Jobs_Ingenuer' , 'Ingenuer'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Jobs_Mechanic", "messageName,messageContent", "'ReactionRole_Jobs_Mechanic' , 'Mechanic'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Jobs_Seller", "messageName,messageContent", "'ReactionRole_Jobs_Seller' , 'Seller'");
+
+        /* Hobby */
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Hobby_Draw", "messageName,messageContent", "'ReactionRole_Hobby_Draw' , 'draw'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Hobby_MeetUp", "messageName,messageContent", "'ReactionRole_Hobby_MeetUp' , 'meetup friends'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Hobby_Gaming", "messageName,messageContent", "'ReactionRole_Hobby_Gaming' , 'gaming'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Hobby_WatchTV", "messageName,messageContent", "'ReactionRole_Hobby_WatchTV' , 'watch TV'");
+
+        /* Sport */
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Sport_Swim", "messageName,messageContent", "'ReactionRole_Sport_Swim' , 'Swim'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Sport_Dance", "messageName,messageContent", "'ReactionRole_Sport_Dance' , 'Dance'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Sport_Climb", "messageName,messageContent", "'ReactionRole_Sport_Climb' , 'Climb'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Sport_Football", "messageName,messageContent", "'ReactionRole_Sport_Football' , 'Football'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Sport_Baseball", "messageName,messageContent", "'ReactionRole_Sport_Baseball' , 'Baseball'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Sport_Basketball", "messageName,messageContent", "'ReactionRole_Sport_Basketball' , 'Basketball'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Sport_Hockey", "messageName,messageContent", "'ReactionRole_Sport_Hockey' , 'Hockey'");
+        Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Sport_Gun", "messageName,messageContent", "'ReactionRole_Sport_Gun' , 'Gun Sport'");
+        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Sport_Fight", "messageName,messageContent", "'ReactionRole_Sport_Fight' , 'Fight Sport'");
+
         /* Other */
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "SingleSelection", "messageName,messageContent", "'SingleSelection' , 'You only can select one'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "MultipleSelection", "messageName,messageContent", "'MultipleSelection' , 'You can select multiple'");
@@ -285,6 +425,7 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "Role_Country_Heading", "messageName,messageContent", "'Role_Country_Heading' , '____________ \" Country's \" ____________'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "Role_Sex_Heading", "messageName,messageContent", "'Role_Sex_Heading' , '____________ \" Sex \" ____________'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "Role_StarSign_Heading", "messageName,messageContent", "'Role_StarSign_Heading' , '____________ \" StarSign \" ____________'");
+
     }
 
 }

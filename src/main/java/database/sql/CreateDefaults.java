@@ -159,17 +159,37 @@ public class CreateDefaults {
     }
 
     public void createEmoji(Guild guild){
-        Main.getMySql().insertInto(guild , "Emojo", "ReactionID", "Accept", "ReactionID,Reaction", "'Accept' , '!'");
-        Main.getMySql().insertInto(guild , "Emojo", "ReactionID", "Deny", "ReactionID,Reaction", "'Deny' , '!'");
 
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "Gender_Male", "ReactionID,Reaction", "'Gender_Male' , ':male_sign:'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "Gender_Female", "ReactionID,Reaction", "'Gender_Female' , ':female_sign:'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "Gender_Other", "ReactionID,Reaction", "'Gender_Other' , ':ll_genderneutral_sign:'");
+        /* Enviroment */
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "Accept", "ReactionID,Reaction", "'Accept' , '!'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "Deny", "ReactionID,Reaction", "'Deny' , '!'");
 
+        /* Gender */
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "Gender_Male", "ReactionID,Reaction", "'Gender_Male' , ':mens:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "Gender_Female", "ReactionID,Reaction", "'Gender_Female' , ':womens:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "Gender_Other", "ReactionID,Reaction", "'Gender_Other' , ':joy:'");
+
+        /* Age */
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Age_13-15", "ReactionID,Reaction", "'ReactionRole_Age_13-15' , ':baby_tone3:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Age_16-17", "ReactionID,Reaction", "'ReactionRole_Age_16-17' , ':adult_tone3:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Age_18+", "ReactionID,Reaction", "'ReactionRole_Age_18+' , ':older_adult_tone3:'");
 
+        /* Animal */
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Wolf", "ReactionID,Reaction", "'ReactionRole_Animal_Wolf' , ':wolf:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Dog", "ReactionID,Reaction", "'ReactionRole_Animal_Dog' , ':dog:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Cat", "ReactionID,Reaction", "'ReactionRole_Animal_Cat' , ':cat:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Rabbit", "ReactionID,Reaction", "'ReactionRole_Animal_Rabbit' , ':rabbit:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Fox", "ReactionID,Reaction", "'ReactionRole_Animal_Fox' , ':fox:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Bear", "ReactionID,Reaction", "'ReactionRole_Animal_Bear' , ':bear:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Tiger", "ReactionID,Reaction", "'ReactionRole_Animal_Tiger' , ':tiger:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Lion", "ReactionID,Reaction", "'ReactionRole_Animal_Lion' , ':lion_face:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Kangaroo", "ReactionID,Reaction", "'ReactionRole_Animal_Kangaroo' , ':kangaroo:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Giraffe", "ReactionID,Reaction", "'ReactionRole_Animal_Giraffe' , ':giraffe:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Monkey", "ReactionID,Reaction", "'ReactionRole_Animal_Monkey' , ':monkey_face:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Koala", "ReactionID,Reaction", "'ReactionRole_Animal_Koala' , ':koala:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Animal_Horse", "ReactionID,Reaction", "'ReactionRole_Animal_Horse' , ':horse:'");
+
+        /* Color */
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Color_Red", "ReactionID,Reaction", "'ReactionRole_Color_Red' , ':red_circle:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Color_Orange", "ReactionID,Reaction", "'ReactionRole_Color_Orange' , ':orange_circle:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Color_Yellow", "ReactionID,Reaction", "'ReactionRole_Color_Yellow' , ':yellow_circle:'");
@@ -179,10 +199,10 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Color_Pink", "ReactionID,Reaction", "'ReactionRole_Color_Pink' , ':hibiscus:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Color_Cyan", "ReactionID,Reaction", "'ReactionRole_Color_Cyan' , ':blossom:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Color_Brown", "ReactionID,Reaction", "'ReactionRole_Color_Brown' , ':brown_circle:'");
-
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Color_Light", "ReactionID,Reaction", "'ReactionRole_Color_Light' , ':white_circle:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Color_Dark", "ReactionID,Reaction", "'ReactionRole_Color_Dark' , ':black_circle:'");
 
+        /* Country */
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Country_Germany", "ReactionID,Reaction", "'ReactionRole_Country_Germany' , ':flag_de:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Country_America", "ReactionID,Reaction", "'ReactionRole_Country_America' , ':flag_us:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Country_England", "ReactionID,Reaction", "'ReactionRole_Country_England' , ':flag_gb:'");
@@ -191,19 +211,22 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Country_Russia", "ReactionID,Reaction", "'ReactionRole_Country_Russia' , ':flag_rs:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Country_Swiz", "ReactionID,Reaction", "'ReactionRole_Country_Swiz' , ':flag_ch:'");
 
+        /* Pronouns */
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Pronouns_He", "ReactionID,Reaction", "'ReactionRole_Pronouns_He' , ':man_pouting:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Pronouns_She", "ReactionID,Reaction", "'ReactionRole_Pronouns_She' , ':woman_pouting:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Pronouns_It", "ReactionID,Reaction", "'ReactionRole_Pronouns_It' , ':nail_care:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Pronouns_Ask", "ReactionID,Reaction", "'ReactionRole_Pronouns_Ask' , ':question:'");
-//
+
+        /* Sex */
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sex_Gay", "ReactionID,Reaction", "'ReactionRole_Sex_Gay' , ':rainbow_flag:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sex_Bi", "ReactionID,Reaction", "'ReactionRole_Sex_Bi' , ':star_struck:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sex_Lesb", "ReactionID,Reaction", "'ReactionRole_Sex_Lesb' , ':partying_face:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sex_Pansex", "ReactionID,Reaction", "'ReactionRole_Sex_Pansex' , ':blush:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sex_Asex", "ReactionID,Reaction", "'ReactionRole_Sex_Asex' , ':stuck_out_tongue_closed_eyes:'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sex_Asex", "ReactionID,Reaction", "'ReactionRole_Sex_Straight' , ':grinning:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sex_Straight", "ReactionID,Reaction", "'ReactionRole_Sex_Straight' , ':grinning:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sex_Other", "ReactionID,Reaction", "'ReactionRole_Sex_Other' , ':slight_smile:'");
 
+        /* StarSign */
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_StarSign_Capricorn", "ReactionID,Reaction", "'ReactionRole_StarSign_Capricorn' , ':Capricorn:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_StarSign_Aquarius", "ReactionID,Reaction", "'ReactionRole_StarSign_Aquarius' , ':Aquarius:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_StarSign_Pisces", "ReactionID,Reaction", "'ReactionRole_StarSign_Pisces' , ':Pisces:'");
@@ -216,6 +239,78 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_StarSign_Libra", "ReactionID,Reaction", "'ReactionRole_StarSign_Libra' , ':Libra:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_StarSign_Scorpio", "ReactionID,Reaction", "'ReactionRole_StarSign_Scorpio' , ':Scorpio:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_StarSign_Sagittarius", "ReactionID,Reaction", "'ReactionRole_StarSign_Sagittarius' , ':Sagittarius:'");
+
+        /* Job */
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_IT", "ReactionID,Reaction", "'ReactionRole_Jobs_IT' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Army", "ReactionID,Reaction", "'ReactionRole_Jobs_Army' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Medic", "ReactionID,Reaction", "'ReactionRole_Jobs_Medic' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Educator", "ReactionID,Reaction", "'ReactionRole_Jobs_Educator' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Caregiver", "ReactionID,Reaction", "'ReactionRole_Jobs_Caregiver' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Social", "ReactionID,Reaction", "'ReactionRole_Jobs_Social' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Banker", "ReactionID,Reaction", "'ReactionRole_Jobs_Banker' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Ingenuer", "ReactionID,Reaction", "'ReactionRole_Jobs_Ingenuer' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Mechanic", "ReactionID,Reaction", "'ReactionRole_Jobs_Mechanic' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Seller", "ReactionID,Reaction", "'ReactionRole_Jobs_Seller' , '-'");
+
+        /* Hobby */
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Hobby_Draw", "ReactionID,Reaction", "'ReactionRole_Hobby_Draw' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Hobby_MeetUp", "ReactionID,Reaction", "'ReactionRole_Hobby_MeetUp' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Hobby_Gaming", "ReactionID,Reaction", "'ReactionRole_Hobby_Gaming' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Hobby_WatchTV", "ReactionID,Reaction", "'ReactionRole_Hobby_WatchTV' , '-'");
+
+        /* Sport */
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Swim", "ReactionID,Reaction", "'ReactionRole_Sport_Swim' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Dance", "ReactionID,Reaction", "'ReactionRole_Sport_Dance' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Climb", "ReactionID,Reaction", "'ReactionRole_Sport_Climb' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Football", "ReactionID,Reaction", "'ReactionRole_Sport_Football' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Baseball", "ReactionID,Reaction", "'ReactionRole_Sport_Baseball' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Basketball", "ReactionID,Reaction", "'ReactionRole_Sport_Basketball' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Hockey", "ReactionID,Reaction", "'ReactionRole_Sport_Hockey' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Gun", "ReactionID,Reaction", "'ReactionRole_Sport_Gun' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Fight", "ReactionID,Reaction", "'ReactionRole_Sport_Fight' , '-'");
+
+        /* GameCategory */
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_GameCategory_Action", "ReactionID,Reaction", "'ReactionRole_GameCategory_Action' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_GameCategory_Action-Adventure", "ReactionID,Reaction", "'ReactionRole_GameCategory_Action-Adventure' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_GameCategory_Adventure", "ReactionID,Reaction", "'ReactionRole_GameCategory_Adventure' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_GameCategory_RolePlay", "ReactionID,Reaction", "'ReactionRole_GameCategory_RolePlay' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_GameCategory_Simulation", "ReactionID,Reaction", "'ReactionRole_GameCategory_Simulation' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_GameCategory_Strategy", "ReactionID,Reaction", "'ReactionRole_GameCategory_Strategy' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_GameCategory_Sport", "ReactionID,Reaction", "'ReactionRole_GameCategory_Sport' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_GameCategory_Puzzle", "ReactionID,Reaction", "'ReactionRole_GameCategory_Puzzle' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_GameCategory_Idle", "ReactionID,Reaction", "'ReactionRole_GameCategory_Idle' , '-'");
+
+        /* Game */
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Game_Minecraft", "ReactionID,Reaction", "'ReactionRole_Game_Minecraft' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Game_Battlefield", "ReactionID,Reaction", "'ReactionRole_Game_Battlefield' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Game_CallOfDuty", "ReactionID,Reaction", "'ReactionRole_Game_CallOfDuty' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Game_CounterStrike", "ReactionID,Reaction", "'ReactionRole_Game_CounterStrike' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Game_DeadByDaylight", "ReactionID,Reaction", "'ReactionRole_Game_DeadByDaylight' , '-'");
+
+        /* Movie */
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Movie_Action", "ReactionID,Reaction", "'ReactionRole_Movie_Action' , ':gun:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Movie_Comedy", "ReactionID,Reaction", "'ReactionRole_Movie_Comedy' , ':rofl:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Movie_Drama", "ReactionID,Reaction", "'ReactionRole_Movie_Drama' , ':weary:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Movie_Horror", "ReactionID,Reaction", "'ReactionRole_Movie_Horror' , ':dizzy_face:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Movie_Fantasy", "ReactionID,Reaction", "'ReactionRole_Movie_Fantasy' , ':mage:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Movie_Mystery", "ReactionID,Reaction", "'ReactionRole_Movie_Mystery' , ':dragon_face:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Movie_Romance", "ReactionID,Reaction", "'ReactionRole_Movie_Romance' , ':heart_eyes:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Movie_Thriller", "ReactionID,Reaction", "'ReactionRole_Movie_Thriller' , ':grimacing:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Movie_Western", "ReactionID,Reaction", "'ReactionRole_Movie_Western' , ':cowboy:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Movie_Series", "ReactionID,Reaction", "'ReactionRole_Movie_Series' , ':clapper:'");
+
+        /* Music */
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_Country", "ReactionID,Reaction", "'ReactionRole_Music_Country' , ':cowboy:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_Electronic", "ReactionID,Reaction", "'ReactionRole_Music_Electronic' , ':electric_plug:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_Funk", "ReactionID,Reaction", "'ReactionRole_Music_Funk' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_HipHop", "ReactionID,Reaction", "'ReactionRole_Music_HipHop' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_Jazz", "ReactionID,Reaction", "'ReactionRole_Music_Jazz' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_Pop", "ReactionID,Reaction", "'ReactionRole_Music_Pop' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_Punk", "ReactionID,Reaction", "'ReactionRole_Music_Punk' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_Rock", "ReactionID,Reaction", "'ReactionRole_Music_Rock' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_Reggae", "ReactionID,Reaction", "'ReactionRole_Music_Reggae' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_Metal", "ReactionID,Reaction", "'ReactionRole_Music_Metal' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Music_Tradition", "ReactionID,Reaction", "'ReactionRole_Music_Tradition' , '-'");
 
     }
 
