@@ -25,19 +25,19 @@ public class Pronouns extends ListenerAdapter {
 
         switch (reaction){
 
-            case "a":
+            case ":man_pouting:":
                 addRole(event, "He/Him");
                 break;
 
-            case "s":
+            case ":woman_pouting:":
                 addRole(event, "She/Her");
                 break;
 
-            case "d":
+            case ":nail_care:":
                 addRole(event, "They/Them");
                 break;
 
-            case "w":
+            case ":question:":
                 addRole(event, "Ask about my pronouns");
                 break;
 

@@ -25,16 +25,16 @@ public class SelfRole {
         CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
         embedBuilder.setEmbedColor((String) Main.getMySql().getObject(event.getGuild(), "EmbedColor", "EmbedMessage", "SelfRole_Gender", "EmbedColor"));
         embedBuilder.setTitle((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Gender_Heading", "messageContent"));
-        embedBuilder.setContent((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "SingleSelection", "messageContent") + "\n" +
+        embedBuilder.setContent(Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "SingleSelection", "messageContent") + "\n" +
                 "\n" +
-                ":male_sign: **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Gender_Male", "messageContent") + "**\n" +
-                ":female_sign: **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Gender_Female", "messageContent") + "**\n" +
-                ":joy: **Other**");
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "Gender_Male", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Gender_Male", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "Gender_Female", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Gender_Female", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "Gender_Other", "Reaction") + " **Other**");
 
         event.getTextChannel().sendMessage(embedBuilder.build()).queue(message -> {
-            message.addReaction(EmojiParser.parseToUnicode(":mens:")).queue();
-            message.addReaction(EmojiParser.parseToUnicode(":womens:")).queue();
-            message.addReaction(EmojiParser.parseToUnicode(":green_heart:")).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "Gender_Male", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "Gender_Female", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "Gender_Other", "Reaction"))).queue();
         });
 
     }

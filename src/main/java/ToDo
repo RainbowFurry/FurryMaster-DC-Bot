@@ -13,6 +13,8 @@ selfrole create all
 create user dbs for user already on server... + new
 create emoji db
 prefix binding
+bot join all dc
+recreate db
 
 self role FERTIG + create Roles + protect singele/multiple
 show logs
