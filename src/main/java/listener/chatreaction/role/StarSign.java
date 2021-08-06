@@ -1,5 +1,7 @@
 package listener.chatreaction.role;
 
+import core.Main;
+import manager.Checker;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -23,60 +25,32 @@ public class StarSign extends ListenerAdapter {
         reaction = reaction.split("\\(")[1];
         reaction = reaction.replace(")", "");
 
-        switch (reaction){
-
-            case ":capricorn:":
-                addRole(event, "Capricorn");
-                break;
-
-            case ":aquarius:":
-                addRole(event, "Aquarius");
-                break;
-
-            case ":pisces:":
-                addRole(event, "Pisces");
-                break;
-
-            case ":aries:":
-                addRole(event, "Aries");
-                break;
-
-            case ":taurus:":
-                addRole(event, "Taurus");
-                break;
-
-            case ":gemini:":
-                addRole(event, "Gemini");
-                break;
-
-            case ":cancer:":
-                addRole(event, "Cancer");
-                break;
-
-            case ":leo:":
-                addRole(event, "Leo");
-                break;
-
-            case ":virgo:":
-                addRole(event, "Virgo");
-                break;
-
-            case ":libra:":
-                addRole(event, "Libra");
-                break;
-
-            case ":scorpio:":
-                addRole(event, "Scorpio");
-                break;
-
-            case ":sagittarius:":
-                addRole(event, "Sagittarius");
-                break;
-
-            default:
-                event.getReaction().removeReaction().queue();
-                break;
-
+        if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Capricorn", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Capricorn", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Aquarius", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Aquarius", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Pisces", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Pisces", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Aries", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Aries", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Taurus", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Taurus", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Gemini", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Gemini", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Cancer", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Cancer", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Leo", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Leo", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Virgo", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Virgo", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Libra", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Libra", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Scorpio", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Scorpio", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_StarSign_Sagittarius", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_StarSign_Sagittarius", "messageContent"));
+        }else {
+            event.getReaction().removeReaction().queue();
         }
 
     }

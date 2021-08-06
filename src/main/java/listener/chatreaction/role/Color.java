@@ -1,5 +1,7 @@
 package listener.chatreaction.role;
 
+import core.Main;
+import manager.Checker;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -23,58 +25,30 @@ public class Color extends ListenerAdapter {
         reaction = reaction.split("\\(")[1];
         reaction = reaction.replace(")", "");
 
-        switch (reaction){
-
-            case ":red_circle:":
-                addRole(event, "Red");
-                break;
-
-            case ":orange_circle:":
-                addRole(event, "Orange");
-                break;
-
-            case ":yellow_circle:":
-                addRole(event, "Yellow");
-                break;
-
-            case ":green_circle:":
-                addRole(event, "Green");
-                break;
-
-            case ":blue_circle:":
-                addRole(event, "Blue");
-                break;
-
-            case ":purple_circle:":
-                addRole(event, "Purple");
-                break;
-
-            case "7":
-                addRole(event, "Pink");
-                break;
-
-            case "8":
-                addRole(event, "Cyan");
-                break;
-
-            case ":brown_circle:":
-                addRole(event, "Brown");
-                break;
-
-                //Type
-
-            case "n":
-                addRole(event, "Light");
-                break;
-
-            case "m":
-                addRole(event, "Dark");
-                break;
-
-            default:
-                event.getReaction().removeReaction().queue();
-                break;
-
+        if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Red", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Red", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Orange", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Orange", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Yellow", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Yellow", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Green", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Green", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Blue", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Blue", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Purple", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Purple", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Pink", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Pink", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Cyan", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Cyan", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Brown", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Brown", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Light", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Light", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Color_Dark", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Color_Dark", "messageContent"));
+        }else {
+            event.getReaction().removeReaction().queue();
         }
 
     }

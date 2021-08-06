@@ -1,5 +1,7 @@
 package listener.chatreaction.role;
 
+import core.Main;
+import manager.Checker;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -23,28 +25,16 @@ public class Pronouns extends ListenerAdapter {
         reaction = reaction.split("\\(")[1];
         reaction = reaction.replace(")", "");
 
-        switch (reaction){
-
-            case ":man_pouting:":
-                addRole(event, "He/Him");
-                break;
-
-            case ":woman_pouting:":
-                addRole(event, "She/Her");
-                break;
-
-            case ":nail_care:":
-                addRole(event, "They/Them");
-                break;
-
-            case ":question:":
-                addRole(event, "Ask about my pronouns");
-                break;
-
-            default:
-                event.getReaction().removeReaction().queue();
-                break;
-
+        if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Pronouns_He", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Pronouns_He", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Pronouns_She", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Pronouns_She", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Pronouns_It", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Pronouns_It", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Pronouns_Ask", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Pronouns_Ask", "messageContent"));
+        }else {
+            event.getReaction().removeReaction().queue();
         }
 
     }

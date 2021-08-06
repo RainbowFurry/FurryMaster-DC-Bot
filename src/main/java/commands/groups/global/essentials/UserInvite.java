@@ -1,4 +1,4 @@
-package commands.groups.global;
+package commands.groups.global.essentials;
 
 import commands.Command;
 import net.dv8tion.jda.api.entities.Invite;

@@ -1,5 +1,6 @@
 package database.sql;
 
+import core.Main;
 import database.BotFileManager;
 import net.dv8tion.jda.api.entities.Guild;
 
@@ -23,7 +24,7 @@ public class AsyncMySqlManager {
 
     private final ExecutorService executor;
     private final MySQL sql;
-    private final BotFileManager botFileManager = new BotFileManager();
+    private final BotFileManager botFileManager = Main.getBotFileManager();
 
     public AsyncMySqlManager(final String host, final int port, final String user, final String password) throws Throwable {
         this.executor = Executors.newCachedThreadPool();

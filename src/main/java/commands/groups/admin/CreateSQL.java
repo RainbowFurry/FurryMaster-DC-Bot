@@ -1,4 +1,4 @@
-package commands.JasonJT;
+package commands.groups.admin;
 
 import commands.Command;
 import core.Main;

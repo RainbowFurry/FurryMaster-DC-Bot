@@ -1,5 +1,7 @@
 package listener.chatreaction.role;
 
+import core.Main;
+import manager.Checker;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -23,50 +25,14 @@ public class Gender extends ListenerAdapter {
         reaction = reaction.split("\\(")[1];
         reaction = reaction.replace(")", "");
 
-        switch (reaction){
-
-            case ":male_sign:":
-                addRole(event, "Male");
-                break;
-
-            case ":female_sign:":
-                addRole(event, "Female");
-                break;
-
-            case "q":
-                addRole(event, "Other");
-                break;
-
-                //Advanced
-
-            case "w":
-                addRole(event, "Genderqueer");
-                break;
-
-            case "a":
-                addRole(event, "Non Binary");
-                break;
-
-            case "s":
-                addRole(event, "Transgender");
-                break;
-
-            case "d":
-                addRole(event, "Intersex");
-                break;
-
-            case "x":
-                addRole(event, "Genderfluid");
-                break;
-
-            case "c":
-                addRole(event, "Agender");
-                break;
-
-            default:
-                event.getReaction().removeReaction().queue();
-                break;
-
+        if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "Gender_Male", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "Gender_Male", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "Gender_Female", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "Gender_Female", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "Gender_Other", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "Gender_Other", "messageContent"));
+        }else {
+            event.getReaction().removeReaction().queue();
         }
 
     }

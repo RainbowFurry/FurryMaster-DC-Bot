@@ -1,5 +1,7 @@
 package listener.chatreaction.role;
 
+import core.Main;
+import manager.Checker;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -23,23 +25,16 @@ public class Age extends ListenerAdapter {
         reaction = reaction.split("\\(")[1];
         reaction = reaction.replace(")", "");
 
-        switch (reaction){
+        if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Age_13-15", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Age_13-15", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Age_16-17", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Age_16-17", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Age_18+", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Age_18+", "messageContent"));
+        }else {
+            event.getReaction().removeReaction().queue();
+        }
 
-            case ":baby_tone3:":
-                addRole(event, "13-15");
-                break;
-
-            case ":adult_tone3:":
-                addRole(event, "16-17");
-                break;
-
-            case ":older_adult_tone3:":
-                addRole(event, "18+");
-                break;
-
-            default:
-                event.getReaction().removeReaction().queue();
-                break;
 /*
             case "4":
                 addRole(event, "18-25");
@@ -53,7 +48,6 @@ public class Age extends ListenerAdapter {
                 addRole(event, "Older");
                 break;
 */
-        }
 
     }
 

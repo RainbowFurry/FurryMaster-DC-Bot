@@ -1,4 +1,4 @@
-package commands.groups.global;
+package commands.groups.global.essentials;
 
 import builder.CustomEmbedBuilder;
 import builder.PrivateMessageBuilder;

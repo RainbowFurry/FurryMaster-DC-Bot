@@ -1,5 +1,7 @@
 package listener.chatreaction.role;
 
+import core.Main;
+import manager.Checker;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -23,47 +25,23 @@ public class Country extends ListenerAdapter {
         String reaction = event.getReactionEmote().toString();
         reaction = reaction.split("\\(")[1];
         reaction = reaction.replace(")", "");
-
-        switch (reaction){
-
-            case ":flag_us:":
-                addRole(event, "");
-                break;
-
-            case ":flag_de:":
-                addRole(event, "");
-                break;
-
-            case ":flag_gb:":
-                addRole(event, "");
-                break;
-
-            case ":flag_fr:":
-                addRole(event, "");
-                break;
-
-            case ":flag_it:":
-                addRole(event, "");
-                break;
-
-            case ":flag_ea:":
-                addRole(event, "");
-                break;
-
-            case ":flag_rs:":
-                addRole(event, "");
-                break;
-
-            case ":flag_ch:":
-                addRole(event, "");
-                break;
-
-            default:
-                event.getReaction().removeReaction().queue();
-                break;
-
-            //...
-
+        
+        if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Country_Germany", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Country_Germany", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Country_America", "Reaction")){
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Country_America", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Country_England", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Country_England", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Country_Franc", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Country_Franc", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Country_Italy", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Country_Italy", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Country_Russia", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Country_Russia", "messageContent"));
+        }else if(reaction == Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Country_Swiz", "Reaction")) {
+            addRole(event, (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Country_Swiz", "messageContent"));
+        }else {
+            event.getReaction().removeReaction().queue();
         }
 
     }

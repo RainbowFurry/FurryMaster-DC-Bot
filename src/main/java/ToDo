@@ -11,6 +11,7 @@ show logs
 show stats
 
 private join/leave message
+//bot id muss für invite mit gespeichert werden...
 ---------------------------------------------
 Else:
 all commands
@@ -20,7 +21,6 @@ builder...
 check... api
 
 on guild join get owner and send pm to setup... - setup command erstellt setup channel und delete after done... language, prefix, modules, create defaults,
-serveroptions - database, modules, ServerInfo, ...
 if db not exist - weil bot restart beim join sicherung...
 --------------------------------------
 Commands:
@@ -30,6 +30,7 @@ report system
 nick - autocheck/selfcheck/einfach so
 google/yt
 rainbow rank - rainbow, gay, bi, custom
+rock paper sisses, dice, miesmuschel, jokes, etc...
 
 Chat Filer system
 kick/ban - command
@@ -72,4 +73,4 @@ ALLES ZWISCHENSPEICHERN/HASHEN...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 check all commands/listener if channel and permissions etc. right + module pm etc enabled
 exeption log - own server? - logfile - sout
 upload git + server
-CreateBots and join: FurryMaster, LGBT-Master, GlobalName-Master
+CreateBots and join: FurryMaster, LGBT-Master, GlobalName-Master, Zero, Wolfi

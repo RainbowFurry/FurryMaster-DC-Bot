@@ -39,21 +39,12 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'ReactionRole_Gender_Male' , 'Mann'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Female", "messageName,messageContent", "'ReactionRole_Gender_Female' , 'Frau'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Divers", "messageName,messageContent", "'ReactionRole_Gender_Divers' , 'Divers'");
-        /*Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");*/
 
         /* Age */
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Age_Heading", "messageName,messageContent", "'ReactionRole_Age_Heading' , 'Alters Rollen'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Age_13-15", "messageName,messageContent", "'ReactionRole_Age_13-15' , '13-15'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Age_16-17", "messageName,messageContent", "'ReactionRole_Age_16-17' , '16-17'");
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Age_18+", "messageName,messageContent", "'ReactionRole_Age_18+' , '18+'");
-        /*Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");*/
 
         /* Animal */
         Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Animal_Heading", "messageName,messageContent", "'ReactionRole_Animal_Heading' , 'Tier Rollen'");
@@ -258,21 +249,12 @@ public class Master {
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'ReactionRole_Gender_Male' , 'Man'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Gender_Female", "messageName,messageContent", "'ReactionRole_Gender_Female' , 'Woman'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Gender_Divers", "messageName,messageContent", "'ReactionRole_Gender_Divers' , 'Divers'");
-        /*Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");*/
 
         /* Age */
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Age_Heading", "messageName,messageContent", "'ReactionRole_Age_Heading' , 'Age Roles'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Age_13-15", "messageName,messageContent", "'ReactionRole_Age_13-15' , '13-15'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Age_16-17", "messageName,messageContent", "'ReactionRole_Age_16-17' , '16-17'");
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Age_18+", "messageName,messageContent", "'ReactionRole_Age_18+' , '18+'");
-        /*Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");
-        Main.getMySql().insertInto(null , "Language_DE", "messageName", "ReactionRole_Gender_Male", "messageName,messageContent", "'Mann' , '!'");*/
 
         /* Animal */
         Main.getMySql().insertInto(null , "Language_EN", "messageName", "ReactionRole_Animal_Heading", "messageName,messageContent", "'ReactionRole_Animal_Heading' , 'Animal Roles'");

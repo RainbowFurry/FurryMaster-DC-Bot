@@ -1,18 +1,15 @@
-package commands.groups.global;
+package commands.groups.global.essentials;
 
-import builder.CustomEmbedBuilder;
 import commands.Command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
-import java.awt.*;
-
 /**
  * @author DarkSide_Wolf
- * File was created in 17:43 01.08.2021
+ * File was created in 23:26 04.08.2021
  * Copyright (c) 2018 by DarkSide_Wolf to present. All rights reserved.
  * Website: DarkWolfCraft.net
  */
-public class Help implements Command {
+public class UpTime implements Command {
 
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
@@ -21,13 +18,6 @@ public class Help implements Command {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) throws Exception {
-
-        CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
-        embedBuilder.setEmbedColor(Color.green);
-        embedBuilder.setTitle("Help");
-        embedBuilder.setContent("Du brauchst hilfe?\n\n ...");
-
-        event.getTextChannel().sendMessage(embedBuilder.build()).queue();
 
     }
 

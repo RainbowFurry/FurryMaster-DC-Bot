@@ -1,15 +1,16 @@
 package core;
 
-import commands.JasonJT.CreateSQL;
+import commands.groups.admin.CreateSQL;
 import commands.JasonJT.SetActivity;
 import commands.JasonJT.Test;
 import commands.groups.admin.*;
-import commands.groups.global.*;
+import commands.groups.global.essentials.*;
 import commands.groups.user.Commands;
 import commands.music.Music;
 import database.BotFileManager;
 import database.sql.AsyncMySqlManager;
 import database.sql.CreateDefaults;
+import listener.chatreaction.role.*;
 import listener.essentials.*;
 
 import listener.module.JoinRoleListener;
@@ -135,21 +136,21 @@ public class Main {
         //jda.addEventListener(new TotalRolesStatsListener());//
 
         /* ChatReaction - Role */
-        //jda.addEventListener(new Age());
-        //jda.addEventListener(new Animal());
-        //jda.addEventListener(new Color());
-        //jda.addEventListener(new Country());
-        //jda.addEventListener(new GameCategory());
-        //jda.addEventListener(new Games());
-        //jda.addEventListener(new Gender());
-        //jda.addEventListener(new Movie());
-        //jda.addEventListener(new Music());
-        //jda.addEventListener(new Pronouns());
-        //jda.addEventListener(new Sexuality());
-        //jda.addEventListener(new StarSign());
-        //jda.addEventListener(new Job());
-        //jda.addEventListener(new Sport());
-        //jda.addEventListener(new Hobby());
+        jda.addEventListener(new Age());
+        jda.addEventListener(new Animal());
+        jda.addEventListener(new Color());
+        jda.addEventListener(new Country());
+        jda.addEventListener(new GameCategory());
+        jda.addEventListener(new Games());
+        jda.addEventListener(new Gender());
+        jda.addEventListener(new Movie());
+        jda.addEventListener(new Music());
+        jda.addEventListener(new Pronouns());
+        jda.addEventListener(new Sexuality());
+        jda.addEventListener(new StarSign());
+        jda.addEventListener(new Job());
+        jda.addEventListener(new Sport());
+        jda.addEventListener(new Hobby());
         //jda.addEventListener(new Verification());
 
         /* ChatReaction - Options */
