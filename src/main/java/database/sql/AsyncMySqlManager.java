@@ -1,5 +1,6 @@
 package database.sql;
 
+import database.BotFileManager;
 import net.dv8tion.jda.api.entities.Guild;
 
 import java.sql.Connection;
@@ -22,6 +23,7 @@ public class AsyncMySqlManager {
 
     private final ExecutorService executor;
     private final MySQL sql;
+    private final BotFileManager botFileManager = new BotFileManager();
 
     public AsyncMySqlManager(final String host, final int port, final String user, final String password) throws Throwable {
         this.executor = Executors.newCachedThreadPool();
@@ -43,36 +45,36 @@ public class AsyncMySqlManager {
     public void deleteDatabase(final Guild guild) {
         String database;
         if(guild != null) {
-            database = "FurryMaster_" + guild.getId();
-            this.changeDatabase("FurryMaster_" + guild.getId());
+            database = botFileManager.getDatabaseDatabase() + "_" + guild.getId();
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_" + guild.getId());
         }else {
-            database = "FurryMaster_Master";
-            this.changeDatabase("FurryMaster_Master");
+            database = botFileManager.getDatabaseDatabase() + "_Master";
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_Master");
         }
         this.update("DROP DATABASE IF EXISTS " + database + ";");
     }
 
     public void createTable(final Guild guild, final String table, final String values) {
         if(guild != null)
-            this.changeDatabase("FurryMaster_" + guild.getId());
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_" + guild.getId());
         else
-            this.changeDatabase("FurryMaster_Master");
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_Master");
         this.update("CREATE TABLE IF NOT EXISTS " + table + "(" + values + ");");
     }
 
     public void deleteTable(final Guild guild, final String table) {
         if(guild != null)
-            this.changeDatabase("FurryMaster_" + guild.getId());
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_" + guild.getId());
         else
-            this.changeDatabase("FurryMaster_Master");
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_Master");
         this.update("DROP TABLE " + table + ";");
     }
 
     public void insertInto(final Guild guild, final String table, final String check, final String checkValue, final String values, final String content) {
         if(guild != null)
-            this.changeDatabase("FurryMaster_" + guild.getId());
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_" + guild.getId());
         else
-            this.changeDatabase("FurryMaster_Master");
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_Master");
         if(this.valueExists(guild, table, check, checkValue))
             return;
         this.update("INSERT INTO " + table + "(" + values + ") VALUES (" + content + ");");
@@ -80,33 +82,33 @@ public class AsyncMySqlManager {
 
     public void update(final Guild guild, final String table, final String updateValue, final Object updateContent) {
         if(guild != null)
-            this.changeDatabase("FurryMaster_" + guild.getId());
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_" + guild.getId());
         else
-            this.changeDatabase("FurryMaster_Master");
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_Master");
         this.update("UPDATE " + table + " SET " + updateValue + "='" + updateContent + "';");
     }
 
     public void update(final Guild guild, final String table, final String updateValue, final Object updateContent, final String where, final Object result) {
         if(guild != null)
-            this.changeDatabase("FurryMaster_" + guild.getId());
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_" + guild.getId());
         else
-            this.changeDatabase("FurryMaster_Master");
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_Master");
         this.update("UPDATE " + table + " SET " + updateValue + "='" + updateContent + "' WHERE " + where + "='" + result + "';");
     }
 
     public void delete(final Guild guild, final String table, final String where, final Object result) {
         if(guild != null)
-            this.changeDatabase("FurryMaster_" + guild.getId());
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_" + guild.getId());
         else
-            this.changeDatabase("FurryMaster_Master");
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_Master");
         this.update("DELETE FROM " + table + " WHERE " + where + "='" + result + "';");
     }
 
     public ArrayList<Object> getObjects(final Guild guild, final String table, final String where, final Object result, final String get) {
         if(guild != null)
-            this.changeDatabase("FurryMaster_" + guild.getId());
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_" + guild.getId());
         else
-            this.changeDatabase("FurryMaster_Master");
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_Master");
         final ArrayList<Object> arrayList = new ArrayList<>();
         final ResultSet resultSet = this.query("SELECT * FROM " + table + " WHERE " + where + "='" + result + "';");
         try {
@@ -120,9 +122,9 @@ public class AsyncMySqlManager {
 
     public Object getObject(final Guild guild, final String table, final String where, final Object result, final String get) {
         if(guild != null)
-            this.changeDatabase("FurryMaster_" + guild.getId());
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_" + guild.getId());
         else
-            this.changeDatabase("FurryMaster_Master");
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_Master");
         Object object = null;
         final ResultSet resultSet = this.query("SELECT * FROM " + table + " WHERE " + where + "='" + result + "';");
         try {
@@ -137,9 +139,9 @@ public class AsyncMySqlManager {
 
     private boolean valueExists(final Guild guild, final String table, final String where, final Object result) {
         if(guild != null)
-            this.changeDatabase("FurryMaster_" + guild.getId());
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_" + guild.getId());
         else
-            this.changeDatabase("FurryMaster_Master");
+            this.changeDatabase(botFileManager.getDatabaseDatabase() + "_Master");
         final ResultSet resultSet = this.query("SELECT * FROM " + table + " WHERE " + where + "='" + result + "';");
         try {
             return resultSet.next();

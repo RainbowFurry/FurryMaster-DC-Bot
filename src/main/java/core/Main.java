@@ -138,22 +138,22 @@ public class Main {
         //jda.addEventListener(new TotalRolesStatsListener());//
 
         /* ChatReaction - Role */
-        //jda.addEventListener(new Age());//
-        //jda.addEventListener(new Animal());//
-        //jda.addEventListener(new Color());//
-        //jda.addEventListener(new Country());//
-        //jda.addEventListener(new GameCategory());//
-        //jda.addEventListener(new Games());//
-        //jda.addEventListener(new Gender());//
-        //jda.addEventListener(new Movie());//
-        //jda.addEventListener(new Music());//
-        //jda.addEventListener(new Pronouns());//
-        //jda.addEventListener(new Sexuality());//
-        //jda.addEventListener(new StarSign());//
-        //jda.addEventListener(new Job());//
-        //jda.addEventListener(new Sport());//
-        //jda.addEventListener(new Hobby());//
-        //jda.addEventListener(new Verification());//
+        //jda.addEventListener(new Age());
+        //jda.addEventListener(new Animal());
+        //jda.addEventListener(new Color());
+        //jda.addEventListener(new Country());
+        //jda.addEventListener(new GameCategory());
+        //jda.addEventListener(new Games());
+        //jda.addEventListener(new Gender());
+        //jda.addEventListener(new Movie());
+        //jda.addEventListener(new Music());
+        //jda.addEventListener(new Pronouns());
+        //jda.addEventListener(new Sexuality());
+        //jda.addEventListener(new StarSign());
+        //jda.addEventListener(new Job());
+        //jda.addEventListener(new Sport());
+        //jda.addEventListener(new Hobby());
+        //jda.addEventListener(new Verification());
 
         /* ChatReaction - Options */
 
@@ -166,10 +166,10 @@ public class Main {
 
     /* SQL */
     private static void startMySQL() throws Throwable {
-        setMySql(new AsyncMySqlManager("darkwolfcraft.net",
-                3306,
-                "discord",
-                "Lands_at_the_sea"));
+        setMySql(new AsyncMySqlManager(botFileManager.getDatabaseHost(),
+                botFileManager.getDatabasePort(),
+                botFileManager.getDatabaseUserName(),
+                botFileManager.getDatabasePassword()));
         System.out.println("FurryMaster: MySql Connection has been created Successfully!");
     }
 

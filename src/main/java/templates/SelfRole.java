@@ -62,7 +62,41 @@ public class SelfRole {
     /* Animal */
     public void createAnimalReactionMessage(MessageReceivedEvent event) {
 
-        //
+        CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
+        embedBuilder.setEmbedColor((String) Main.getMySql().getObject(event.getGuild(), "EmbedColor", "EmbedMessage", "SelfRole_Animal", "EmbedColor"));
+        embedBuilder.setTitle((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Heading", "messageContent"));
+        embedBuilder.setContent(Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "SingleSelection", "messageContent") + "\n" +
+                "\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Wolf", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Wolf", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Cat", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Cat", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Dog", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Dog", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Fox", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Fox", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Rabbit", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Rabbit", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Bear", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Bear", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Tiger", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Tiger", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Lion", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Lion", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Kangaroo", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Kangaroo", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Giraffe", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Giraffe", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Monkey", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Monkey", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Koala", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Koala", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Horse", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Animal_Horse", "messageContent") + "**\n"
+        );
+
+        event.getTextChannel().sendMessage(embedBuilder.build()).queue(message -> {
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Wolf", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Cat", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Dog", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Fox", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Rabbit", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Bear", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Tiger", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Lion", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Kangoroo", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Giraffe", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Monkey", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Koala", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Animal_Horse", "Reaction"))).queue();
+        });
 
     }
 
@@ -136,28 +170,128 @@ public class SelfRole {
     /* GameCategory */
     public void createGameCategoryReactionMessage(MessageReceivedEvent event) {
 
-        //
+        CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
+        embedBuilder.setEmbedColor((String) Main.getMySql().getObject(event.getGuild(), "EmbedColor", "EmbedMessage", "SelfRole_GameCategory", "EmbedColor"));
+        embedBuilder.setTitle((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_GameCategory_Heading", "messageContent"));
+        embedBuilder.setContent(Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "SingleSelection", "messageContent") + "\n" +
+                "\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Action", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_GameCategory_Action", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Action-Adventure", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_GameCategory_Action-Adventure", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Adventure", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_GameCategory_Adventure", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_RolePlay", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_GameCategory_RolePlay", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Simulation", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_GameCategory_Simulation", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Strategy", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_GameCategory_Strategy", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Sport", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_GameCategory_Sport", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Puzzle", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_GameCategory_Puzzle", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Pidle", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_GameCategory_Pidle", "messageContent") + "**\n"
+        );
+
+        event.getTextChannel().sendMessage(embedBuilder.build()).queue(message -> {
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Action", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Action-Adventure", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Adventure", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_RolePlay", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Simulation", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Strategy", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Sport", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Puzzle", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_GameCategory_Pidle", "Reaction"))).queue();
+        });
 
     }
 
     /* Games */
     public void createGamesReactionMessage(MessageReceivedEvent event) {
 
-        //
+        CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
+        embedBuilder.setEmbedColor((String) Main.getMySql().getObject(event.getGuild(), "EmbedColor", "EmbedMessage", "SelfRole_Game", "EmbedColor"));
+        embedBuilder.setTitle((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Game_Heading", "messageContent"));
+        embedBuilder.setContent(Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "SingleSelection", "messageContent") + "\n" +
+                "\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Game_Minecraft", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Game_Minecraft", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Game_Battlefield", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Game_Battlefield", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Game_CounterStrike", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Game_CounterStrike", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Game_DeadByDaylight", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Game_DeadByDaylight", "messageContent") + "**\n"
+        );
+
+        event.getTextChannel().sendMessage(embedBuilder.build()).queue(message -> {
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Game_Minecraft", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Game_Battlefield", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Game_CounterStrike", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Game_DeadByDaylight", "Reaction"))).queue();
+        });
 
     }
 
     /* Movie */
     public void createMovieReactionMessage(MessageReceivedEvent event) {
 
-        //
+        CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
+        embedBuilder.setEmbedColor((String) Main.getMySql().getObject(event.getGuild(), "EmbedColor", "EmbedMessage", "SelfRole_Movie", "EmbedColor"));
+        embedBuilder.setTitle((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Heading", "messageContent"));
+        embedBuilder.setContent(Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "MultipleSelection", "messageContent") + "\n" +
+                "\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Action", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Action", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Comedy", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Comedy", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Drama", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Drama", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Horror", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Horror", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Fantasy", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Fantasy", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Mystery", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Mystery", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Romance", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Romance", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Thriller", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Thriller", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Western", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Western", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Series", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Movie_Series", "messageContent") + "**\n"
+        );
+
+        event.getTextChannel().sendMessage(embedBuilder.build()).queue(message -> {
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Action", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Comedy", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Drama", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Horror", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Fantasy", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Mystery", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Romance", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Thriller", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Western", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Movie_Series", "Reaction"))).queue();
+        });
 
     }
 
     /* Music */
     public void createMusicReactionMessage(MessageReceivedEvent event) {
 
-        //
+        CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
+        embedBuilder.setEmbedColor((String) Main.getMySql().getObject(event.getGuild(), "EmbedColor", "EmbedMessage", "SelfRole_Music", "EmbedColor"));
+        embedBuilder.setTitle((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Heading", "messageContent"));
+        embedBuilder.setContent(Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "MultipleSelection", "messageContent") + "\n" +
+                "\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Country", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Country", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Electronic", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Electronic", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Funk", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Funk", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_HipHop", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_HipHop", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Jazz", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Jazz", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Pop", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Pop", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Punk", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Punk", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Rock", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Rock", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Reggae", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Reggae", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Metal", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Metal", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Tradition", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Music_Tradition", "messageContent") + "**\n"
+        );
+
+        event.getTextChannel().sendMessage(embedBuilder.build()).queue(message -> {
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Country", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Electronic", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Funk", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_HipHop", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Jazz", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Pop", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Punk", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Rock", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Reggae", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Metal", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Tradition", "Reaction"))).queue();
+        });
 
     }
 
@@ -256,18 +390,31 @@ public class SelfRole {
 
         CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
         embedBuilder.setEmbedColor((String) Main.getMySql().getObject(event.getGuild(), "EmbedColor", "EmbedMessage", "SelfRole_Sport", "EmbedColor"));
-        embedBuilder.setTitle("StarSign Roles");
-        embedBuilder.setContent((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "MultipleSelection", "messageContent") + "\n" +
+        embedBuilder.setTitle((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Sport_Heading", "messageContent"));
+        embedBuilder.setContent(Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "MultipleSelection", "messageContent") + "\n" +
                 "\n" +
-                " Fußball\n" +
-                " Tennis\n" +
-                " Basketball\n" +
-                " Leichtatletk\n" +
-                " Kampfport\n" +
-                " Tanzsport\n" +
-                "etc...");
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Swim", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Sport_Swim", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Dance", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Sport_Dance", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Climb", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Sport_Climb", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Football", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Sport_Football", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Baseball", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Sport_Baseball", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Basketball", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Sport_Basketball", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Hockey", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Sport_Hockey", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Gun", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Sport_Gun", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Fight", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Sport_Fight", "messageContent") + "**\n"
+        );
 
         event.getTextChannel().sendMessage(embedBuilder.build()).queue(message -> {
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Swim", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Dance", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Climb", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Football", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Baseball", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Basketball", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Hockey", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Music_Rock", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Gun", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Sport_Fight", "Reaction"))).queue();
         });
 
     }
@@ -277,17 +424,20 @@ public class SelfRole {
 
         CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
         embedBuilder.setEmbedColor((String) Main.getMySql().getObject(event.getGuild(), "EmbedColor", "EmbedMessage", "SelfRole_Hobby", "EmbedColor"));
-        embedBuilder.setTitle("StarSign Roles");
-        embedBuilder.setContent((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "MultipleSelection", "messageContent") + "\n" +
+        embedBuilder.setTitle((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Hobby_Heading", "messageContent"));
+        embedBuilder.setContent(Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "MultipleSelection", "messageContent") + "\n" +
                 "\n" +
-                " Freunde Treffen\n" +
-                " Fern sehen\n" +
-                " Klettern\n" +
-                " Schwimmen\n" +
-                " Zocken\n" +
-                "etc...");
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Hobby_Draw", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Hobby_Draw", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Hobby_MeetUp", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Hobby_MeetUp", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Hobby_Gaming", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Hobby_Gaming", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Hobby_WatchTV", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Hobby_WatchTV", "messageContent") + "**\n"
+        );
 
         event.getTextChannel().sendMessage(embedBuilder.build()).queue(message -> {
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Hobby_Draw", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Hobby_MeetUp", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Hobby_Gaming", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Hobby_WatchTV", "Reaction"))).queue();
         });
 
     }
@@ -297,22 +447,32 @@ public class SelfRole {
 
         CustomEmbedBuilder embedBuilder = new CustomEmbedBuilder();
         embedBuilder.setEmbedColor((String) Main.getMySql().getObject(event.getGuild(), "EmbedColor", "EmbedMessage", "SelfRole_Job", "EmbedColor"));
-        embedBuilder.setTitle("StarSign Roles");
-        embedBuilder.setContent((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "MultipleSelection", "messageContent") + "\n" +
+        embedBuilder.setTitle((String) Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Job_Heading", "messageContent"));
+        embedBuilder.setContent(Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "SingleSelection", "messageContent") + "\n" +
                 "\n" +
-                " Mediziener\n" +
-                " Anwalt\n" +
-                " Army\n" +
-                " Erzieher\n" +
-                " IT-ler\n" +
-                " Pfleger\n" +
-                " Bänker\n" +
-                " Ingenuer\n" +
-                " Mechaniker\n" +
-                " Verkäufer\n" +
-                "etc...");
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_IT", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Jobs_IT", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Army", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Jobs_Army", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Medic", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Jobs_Medic", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Educator", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Jobs_Educator", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Caregiver", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Jobs_Caregiver", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Social", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Jobs_Social", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Banker", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Jobs_Banker", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Ingenuer", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Jobs_Ingenuer", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Mechanic", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Jobs_Mechanic", "messageContent") + "**\n" +
+                Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Seller", "Reaction") + " **" + Main.getMySql().getObject(null, Checker.checkServerLanguage(event.getGuild()), "messageName", "ReactionRole_Jobs_Seller", "messageContent") + "**\n"
+        );
 
         event.getTextChannel().sendMessage(embedBuilder.build()).queue(message -> {
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_IT", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Army", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Medic", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Educator", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Caregiver", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Social", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Banker", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Ingenuer", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Mechanic", "Reaction"))).queue();
+            message.addReaction(EmojiParser.parseToUnicode((String) Main.getMySql().getObject(event.getGuild(), "Emoji", "ReactionID", "ReactionRole_Jobs_Seller", "Reaction"))).queue();
         });
 
     }

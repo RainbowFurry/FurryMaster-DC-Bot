@@ -1,5 +1,6 @@
 package templates;
 
+import core.Main;
 import net.dv8tion.jda.api.entities.Guild;
 
 /**
@@ -35,28 +36,47 @@ public class Channel {
     }
 
     public void createLogChannels(Guild guild){
-        guild.createCategory("Log's").queue();
-        guild.createTextChannel("log").queue();
+        if(guild.getTextChannelsByName((String) Main.getMySql().getObject(guild , "Channels", "ChannelID", "Log", "ChannelName"), false).get(0) == null) {
+            guild.createCategory("Log's").queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "Log", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "UserInfo", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "ChannelLog", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "JoinLog", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "LeaveLog", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "InviteLog", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "RoleLog", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "MessageLog", "ChannelName")).queue();
+        }
     }
 
     public void createStatisticsChannels(Guild guild){
-        guild.createCategory("Statistic's").queue();
-        guild.createTextChannel("Members Stats").queue();
+        if(guild.getTextChannelsByName((String) Main.getMySql().getObject(guild , "Channels", "ChannelID", "OnlineMembersStats", "ChannelName"), false).get(0) == null) {
+            guild.createCategory("Statistic's").queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "OnlineMembersStats", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "MemberStats", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "BotsStats", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "TotalMemberStats", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "TextChannelStats", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "VoiceChannelStats", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "TotalChannelStats", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "TotalRolesStats", "ChannelName")).queue();
+        }
     }
 
-    public void createNSFWChannels(){
-        /*
-        * nsfw
-neko
-furry
-anime
-hantai
-solo-male
-solo-female
-guy-on-guy
-girl-on-girl
+    public void createNSFWChannels(Guild guild){
+        guild.createCategory("NSFW").queue();
+        guild.createTextChannel("NSFW").queue();
 
-        * */
+        guild.createTextChannel("solo-male").queue();
+        guild.createTextChannel("solo-female").queue();
+        guild.createTextChannel("guy-on-guy").queue();
+        guild.createTextChannel("girl-on-girl").queue();
+
+        guild.createTextChannel("anime").queue();
+        guild.createTextChannel("hantai").queue();
+
+        guild.createTextChannel("Furry").queue();
+        guild.createTextChannel("Neko").queue();
     }
 
 }

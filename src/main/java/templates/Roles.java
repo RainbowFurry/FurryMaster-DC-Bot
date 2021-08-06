@@ -30,7 +30,7 @@ public class Roles {
     }
 
     public void createPermissionRoles(Guild guild){
-        //
+        //jede permission als eigene rolle?
     }
 
     public void createGenderRoles(Guild guild){
@@ -52,7 +52,22 @@ public class Roles {
     }
 
     public void createAnimalRoles(Guild guild){
-
+        if(guild.getRolesByName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "Role_Animal_Wolf", "messageContent"), false).isEmpty()) {
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "Role_Animal_Heading", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Wolf", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Dog", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Cat", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Rabbit", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Fox", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Bear", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Tiger", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Lion", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Kangaroo", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Giraffe", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Monkey", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Koala", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Animal_Horse", "messageContent")).queue();
+        }
     }
 
     public void createColorRoles(Guild guild){
@@ -78,20 +93,63 @@ public class Roles {
         }
     }
 
-    public void createGamesRoles(Guild guild){
-
+    public void createGameRoles(Guild guild){
+        if(guild.getRolesByName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "Role_Game_Minecraft", "messageContent"), false).isEmpty()) {
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "Role_Game_Heading", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "Role_Game_Minecraft", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Game_Battlefield", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Game_CallOfDuty", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Game_CounterStrike", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Game_DeadByDaylight", "messageContent")).queue();
+        }
     }
 
     public void createGameCategoryRoles(Guild guild){
-
+        if(guild.getRolesByName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_GameCategory_Action", "messageContent"), false).isEmpty()) {
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "Role_GameCategory_Heading", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_GameCategory_Action", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_GameCategory_Action-Adventure", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_GameCategory_Adventure", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_GameCategory_RolePlay", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_GameCategory_Simulation", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_GameCategory_Strategy", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_GameCategory_Sport", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_GameCategory_Puzzle", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_GameCategory_Idle", "messageContent")).queue();
+        }
     }
 
     public void createMovieRoles(Guild guild){
-
+        if(guild.getRolesByName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Action", "messageContent"), false).isEmpty()) {
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Heading", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Action", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Comedy", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Drama", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Horror", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Fantasy", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Mystery", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Romance", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Thriller", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Western", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Movie_Series", "messageContent")).queue();
+        }
     }
 
     public void createMusicRoles(Guild guild){
-
+        if(guild.getRolesByName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Country", "messageContent"), false).isEmpty()) {
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Heading", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Country", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Electronic", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Funk", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_HipHop", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Jazz", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Pop", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Punk", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Rock", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Reggae", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Metal", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Music_Tradition", "messageContent")).queue();
+        }
     }
 
     public void createPronounsRoles(Guild guild){
@@ -136,15 +194,44 @@ public class Roles {
     }
 
     public void createJobRoles(Guild guild){
-
+        if(guild.getRolesByName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_IT", "messageContent"), false).isEmpty()) {
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Job_Heading", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_IT", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_Army", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_Medic", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_Educator", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_Caregiver", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_Social", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_Banker", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_Ingenuer", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_Mechanic", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Jobs_Seller", "messageContent")).queue();
+        }
     }
 
     public void createHobbyRoles(Guild guild){
-
+        if(guild.getRolesByName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Hobby_Draw", "messageContent"), false).isEmpty()) {
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Hobby_Heading", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Hobby_Draw", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Hobby_MeetUp", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Hobby_Gaming", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Hobby_WatchTV", "messageContent")).queue();
+        }
     }
 
     public void createSportRoles(Guild guild){
-
+        if(guild.getRolesByName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Swim", "messageContent"), false).isEmpty()) {
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Heading", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Swim", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Dance", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Climb", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Football", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Baseball", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Basketball", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Hockey", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Gun", "messageContent")).queue();
+            guild.createRole().setName((String) Main.getMySql().getObject(null , Checker.checkServerLanguage(guild), "messageName", "ReactionRole_Sport_Fight", "messageContent")).queue();
+        }
     }
 
     public void createVerificationRole(Guild guild){

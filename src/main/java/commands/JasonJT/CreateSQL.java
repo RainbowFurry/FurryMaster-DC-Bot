@@ -25,7 +25,7 @@ public class CreateSQL implements Command {
     @Override
     public void action(String[] args, MessageReceivedEvent event) throws Exception {
 
-            if(args.length == 3) {
+            if(args.length == 3 || args[1].equals("Master")) {
 
                 if(args[0].equals("create")) {
                     if (args[1].equals("Server")) {

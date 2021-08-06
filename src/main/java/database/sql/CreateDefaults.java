@@ -241,16 +241,16 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_StarSign_Sagittarius", "ReactionID,Reaction", "'ReactionRole_StarSign_Sagittarius' , ':Sagittarius:'");
 
         /* Job */
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_IT", "ReactionID,Reaction", "'ReactionRole_Jobs_IT' , '-'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Army", "ReactionID,Reaction", "'ReactionRole_Jobs_Army' , '-'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Medic", "ReactionID,Reaction", "'ReactionRole_Jobs_Medic' , '-'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Educator", "ReactionID,Reaction", "'ReactionRole_Jobs_Educator' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_IT", "ReactionID,Reaction", "'ReactionRole_Jobs_IT' , ':technologist:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Army", "ReactionID,Reaction", "'ReactionRole_Jobs_Army' , ':police_officer:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Medic", "ReactionID,Reaction", "'ReactionRole_Jobs_Medic' , ':health_worker:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Educator", "ReactionID,Reaction", "'ReactionRole_Jobs_Educator' , ':teacher:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Caregiver", "ReactionID,Reaction", "'ReactionRole_Jobs_Caregiver' , '-'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Social", "ReactionID,Reaction", "'ReactionRole_Jobs_Social' , '-'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Banker", "ReactionID,Reaction", "'ReactionRole_Jobs_Banker' , '-'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Ingenuer", "ReactionID,Reaction", "'ReactionRole_Jobs_Ingenuer' , '-'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Mechanic", "ReactionID,Reaction", "'ReactionRole_Jobs_Mechanic' , '-'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Seller", "ReactionID,Reaction", "'ReactionRole_Jobs_Seller' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Banker", "ReactionID,Reaction", "'ReactionRole_Jobs_Banker' , ':office_worker:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Ingenuer", "ReactionID,Reaction", "'ReactionRole_Jobs_Ingenuer' , ':construction_worker:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Mechanic", "ReactionID,Reaction", "'ReactionRole_Jobs_Mechanic' , ':red_car:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Jobs_Seller", "ReactionID,Reaction", "'ReactionRole_Jobs_Seller' , ':moneybag:'");
 
         /* Hobby */
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Hobby_Draw", "ReactionID,Reaction", "'ReactionRole_Hobby_Draw' , '-'");
@@ -259,9 +259,9 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Hobby_WatchTV", "ReactionID,Reaction", "'ReactionRole_Hobby_WatchTV' , '-'");
 
         /* Sport */
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Swim", "ReactionID,Reaction", "'ReactionRole_Sport_Swim' , '-'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Dance", "ReactionID,Reaction", "'ReactionRole_Sport_Dance' , '-'");
-        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Climb", "ReactionID,Reaction", "'ReactionRole_Sport_Climb' , '-'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Swim", "ReactionID,Reaction", "'ReactionRole_Sport_Swim' , ':person_swimming:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Dance", "ReactionID,Reaction", "'ReactionRole_Sport_Dance' , ':dancer:'");
+        Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Climb", "ReactionID,Reaction", "'ReactionRole_Sport_Climb' , ':person_climbing:'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Football", "ReactionID,Reaction", "'ReactionRole_Sport_Football' , '-'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Baseball", "ReactionID,Reaction", "'ReactionRole_Sport_Baseball' , '-'");
         Main.getMySql().insertInto(guild , "Emoji", "ReactionID", "ReactionRole_Sport_Basketball", "ReactionID,Reaction", "'ReactionRole_Sport_Basketball' , '-'");

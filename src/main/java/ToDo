@@ -1,83 +1,54 @@
 ToDo:
-backup bot git
-(String) Main.getMySql().getObject(commandListener.guild , "Settings", "messageName", "UserBot", "messageContent")
-//member = guilde
-//user = account
-----------------------------------------------
 
 Today:
-Role Template - create all
-Channel Template - create all
-selfrole create all
-db in config
-
+selfrole create all + listener
 create user dbs for user already on server... + new
-create emoji db
-prefix binding
-bot join all dc
-recreate db
 
+recreate db ich + adrian - all
 self role FERTIG + create Roles + protect singele/multiple
+
 show logs
+show stats
 
-//command delete/create userDB @mention?
-//delete/Create commands single/all
-
+private join/leave message
 ---------------------------------------------
 Else:
-show stats
-create channels - setup
-create roles - setup
-exeption log - own server?
-
 all commands
 all listener
 
-channelbuilder
+builder...
 check... api
 
-NSFW default channel create
+on guild join get owner and send pm to setup... - setup command erstellt setup channel und delete after done... language, prefix, modules, create defaults,
+serveroptions - database, modules, ServerInfo, ...
+if db not exist - weil bot restart beim join sicherung...
 --------------------------------------
 Commands:
 music - auto join music channel option true/false, Channelname, ...
 vote
 report system
-roles: single permission roles?
 nick - autocheck/selfcheck/einfach so
 google/yt
 rainbow rank - rainbow, gay, bi, custom
 
 Chat Filer system
 kick/ban - command
-warn system - Spam, custom, etc...
-mute system
+warn systemmodule - Spam, custom, etc... - command + module self
+mute command + Module
 giveaway
-level system
-Auto Clean -> halte channel sauber und lösche inhalt alle xyz?
+level system Module
+Auto Clean Module -> halte channel sauber und lösche inhalt alle xyz?
 setup
-
-check all commands/listener if channel and permissions etc. right
 
 manual verification/auto verification/none -> verification 18+ for nsfw?
 role selection - selfrole 1 oder category channel?
 
-verify -> add roles...
 pw protect - unlock channel
 nick force - real name
-
 age verification...
-
-fallback command prefix
-private join/leave message
-bot exeptions in meinen Server - logfile - sout
-if db not exist - weil bot restart beim join sicherung...
 ---------------------
-SETUP = Install/Edit ModulName ...
 
-1 Command instand setup all... defaults
-schau alle anderen bots...
 
-ALLES ZWISCHENSPEICHERN/HASHEN...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 role perm
 0 none
@@ -85,7 +56,20 @@ role perm
 2 mode
 3 admin
 
+
 setup:
+SETUP = Install/Edit ModulName ...
 SereverInfo: ...
 Server: Roles, Channeks, etc
 Bot: Modules, language, etc
+
+
+//member = guilde
+//user = account
+
+
+ALLES ZWISCHENSPEICHERN/HASHEN...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+check all commands/listener if channel and permissions etc. right + module pm etc enabled
+exeption log - own server? - logfile - sout
+upload git + server
+CreateBots and join: FurryMaster, LGBT-Master, GlobalName-Master
