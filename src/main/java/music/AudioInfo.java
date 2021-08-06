@@ -2,8 +2,7 @@ package music;
 
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import net.dv8tion.jda.api.entities.Guild;
-
-import java.lang.reflect.Member;
+import net.dv8tion.jda.api.entities.Member;
 
 public class AudioInfo {
 
