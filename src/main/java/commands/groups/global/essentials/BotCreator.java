@@ -60,7 +60,7 @@ public class BotCreator implements Command {
                 "etc.");
 
         PrivateMessageBuilder privateMessageBuilder = new PrivateMessageBuilder();
-        privateMessageBuilder.sentPrivateMessage(event.getMember(), embedBuilder.build());
+        privateMessageBuilder.sentPrivateEmbedMessage(event.getMember(), embedBuilder.build());
         //event.getTextChannel().sendMessage(embedBuilder.build()).queue();
 
     }

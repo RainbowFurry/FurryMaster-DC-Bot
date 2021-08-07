@@ -17,6 +17,10 @@ import listener.log.*;
 import listener.module.JoinRoleListener;
 import listener.module.SentJoinMessageListener;
 import listener.module.SentLeaveMessageListener;
+import listener.stats.ChannelStatsListener;
+import listener.stats.Init;
+import listener.stats.MembersStatsListener;
+import listener.stats.RolesStatsListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
@@ -39,7 +43,7 @@ public class Main {
     private static AsyncMySqlManager mySql;
     private static BotFileManager botFileManager;
 
-    /* Start/Execute Bot */
+    /** Start/Execute Bot **/
     public static void main(String[] args) throws Throwable {
         botFileManager = new BotFileManager();
         logger = Logger.getGlobal();
@@ -63,7 +67,7 @@ public class Main {
 
     }
 
-    /* Register all Commands */
+    /** Register all Commands **/
     private static void commandRegistration() {
 
         /* JasonJT */
@@ -100,7 +104,7 @@ public class Main {
 
     }
 
-    /* Register all Listener */
+    /** Register all Listener **/
     private static void listenerRegistration() {
 
         /* Essentials */
@@ -108,6 +112,7 @@ public class Main {
         jda.addEventListener(new ReadyListener());//Bot started output Message
         jda.addEventListener(new BotGuildJoinListener());//Create Database on Bot join Guild
         //jda.addEventListener(new UpTimeListener());//Track the UpTime of the Bot
+        jda.addEventListener(new RainbowListener());//Reset the Rainbow on Disconnect
 
         /* Module */
         jda.addEventListener(new SentJoinMessageListener());//Sent User Join Message
@@ -130,14 +135,10 @@ public class Main {
         jda.addEventListener(new RoleLogListener());//Log Role
 
         /* Stats */
-        //jda.addEventListener(new OnlineMembersStatsListener());//
-        //jda.addEventListener(new MembersStatsListener());//
-        //jda.addEventListener(new BotsStatsListener());//
-        //jda.addEventListener(new TotalMembersStatsListener());//
-        //jda.addEventListener(new TextChannelsStatsListener());//
-        //jda.addEventListener(new VoiceChannelsStatsListener());//
-        //jda.addEventListener(new TotalChannelsStatsListener());//
-        //jda.addEventListener(new TotalRolesStatsListener());//
+        jda.addEventListener(new Init());//Init Stats on Bot Restart
+        jda.addEventListener(new MembersStatsListener());//
+        jda.addEventListener(new ChannelStatsListener());//
+        jda.addEventListener(new RolesStatsListener());//
 
         /* ChatReaction - Role */
         jda.addEventListener(new Age());
@@ -148,7 +149,7 @@ public class Main {
         jda.addEventListener(new Games());
         jda.addEventListener(new Gender());
         jda.addEventListener(new Movie());
-        jda.addEventListener(new Music());
+        //jda.addEventListener(new Music());
         jda.addEventListener(new Pronouns());
         jda.addEventListener(new Sexuality());
         jda.addEventListener(new StarSign());
@@ -167,6 +168,7 @@ public class Main {
 
 
     /* SQL */
+    /** Create the SQL Connection **/
     private static void startMySQL() throws Throwable {
         setMySql(new AsyncMySqlManager(botFileManager.getDatabaseHost(),
                 botFileManager.getDatabasePort(),
@@ -183,6 +185,8 @@ public class Main {
         return mySql;
     }
 
+    /** Create the Default Tables for the DB and
+     * Create the Default Values for the Tables **/
     public static void manageMySQL(Guild guild) {
 
         mySql.createDatabase("FurryMaster_" + guild.getId());
@@ -219,4 +223,5 @@ public class Main {
     public static BotFileManager getBotFileManager() {
         return botFileManager;
     }
+
 }

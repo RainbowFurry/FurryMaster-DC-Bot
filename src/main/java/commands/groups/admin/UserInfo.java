@@ -1,7 +1,11 @@
 package commands.groups.admin;
 
 import commands.Command;
+import core.Main;
+import manager.Checker;
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.Member;
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.awt.*;
@@ -47,37 +51,28 @@ public class UserInfo implements Command {
             time = time.replace("T", " ");
 
             //Create output Embet to display all Information about the selected User
+            Member member = event.getMessage().getMentionedMembers().get(0);
+            String message = (String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "UserInfoMessageTemplate", "messageContent");
+           String nickName = "";
+            if(member.getNickname() == null)
+                nickName = "-";
+            else
+                nickName = member.getNickname();
+
+            message = message.replace("{userName}", member.getEffectiveName())
+                    .replace("{nickName}", nickName)
+                    .replace("{status}", member.getOnlineStatus().toString())
+                    .replace("{joindAt}", member.getTimeJoined().toString())
+                    .replace("{roles}", member.getRoles().toString())
+                    .replace("{likes}", "")
+                    .replace("{warns}","")
+                    .replace("{level}", "");
+
             EmbedBuilder eb = new EmbedBuilder();
             eb.setThumbnail(event.getGuild().getMember(event.getMessage().getMentionedUsers().get(0)).getUser().getAvatarUrl());
             eb.setColor(Color.green);
             eb.setFooter(event.getAuthor().getName() + " " + event.getMember().getRoles().get(0).getName(), event.getAuthor().getAvatarUrl());
-            eb.setDescription(
-
-                    "Title" + "\n" +
-
-                            "Name:\n" + event.getGuild().getMember(event.getMessage().getMentionedUsers().get(0)).getUser().getName() + "\n\n"
-
-                            + "Nick Name:\n" +
-                            nickname + "\n\n"
-
-                            + "Status:\n" +
-                            event.getGuild().getMember(event.getMessage().getMentionedUsers().get(0)).getOnlineStatus() + "\n\n"
-
-                            + "Joined at:\n" +
-                            time + "\n\n"
-
-                            + "Ranks:\n" +
-                            ranks.toString() + "\n"
-
-                            + "---------------------------\n\n"
-
-                            + "Level:\n"
-
-                            + "Likes:\n"
-
-                            + "Warns:\n"
-
-            );
+            eb.setDescription(message);
             event.getTextChannel().sendMessage(eb.build()).queue();
 
         }

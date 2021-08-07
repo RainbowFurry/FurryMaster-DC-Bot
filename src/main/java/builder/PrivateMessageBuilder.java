@@ -12,10 +12,16 @@ import net.dv8tion.jda.api.entities.PrivateChannel;
  */
 public class PrivateMessageBuilder {
 
-    /* Sent a private Message to the User */
-    public void sentPrivateMessage(Member member, MessageEmbed messageEmbed){
+    /** Sent a private Embed Message to the User **/
+    public void sentPrivateEmbedMessage(Member member, MessageEmbed messageEmbed){
         PrivateChannel pc = member.getUser().openPrivateChannel().complete();
         pc.sendMessage(messageEmbed).queue();
+    }
+
+    /** Sent a private Message to the User **/
+    public void sentPrivateMessage(Member member, String message){
+        PrivateChannel pc = member.getUser().openPrivateChannel().complete();
+        pc.sendMessage(message).queue();
     }
 
 }

@@ -1,25 +1,27 @@
 ToDo:
 
 Today:
-join/leave message db... / joinrole
+show stats - fertig -> Adrian nach error fragen
 private join/leave message
+joinrole listener
+Support Listener
+uptime Listener
+
 
 recreate db ich + adrian - all
 
 
-show stats
-all listener uptime/support/
+builder...
+check... api
 ---------------------------------------------
 Else:
 all commands - alle existierende
-
-builder...
-check... api
 
 create user dbs for user already on server... + new
 on guild join get owner and send pm to setup... - setup command erstellt setup channel und delete after done... language, prefix, modules, create defaults,
 if db not exist - weil bot restart beim join sicherung...
 //bot id muss für invite mit gespeichert werden...
+//use ReactionRoleBuilder...
 --------------------------------------
 Commands:
 music - auto join music channel option true/false, Channelname, ...

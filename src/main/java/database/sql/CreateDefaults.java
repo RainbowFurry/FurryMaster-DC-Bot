@@ -11,19 +11,20 @@ import net.dv8tion.jda.api.entities.Guild;
  */
 public class CreateDefaults {
 
+    /** Create the Default Database Values **/
     public void createDefaults(Guild guild){
         Main.getMySql().changeDatabase("FurryMaster_" + guild.getId());
         createEnglishLanguage(guild);
         createGermanLanguage(guild);
         createChannelNames(guild);
         createServerInfo(guild);
-        createWarningList();
         createServerOptions(guild);
         createRoles(guild);
         createEmbedColor(guild);
         createEmoji(guild);
     }
 
+    /** Create the Default Values for the German Language DB **/
     public void createGermanLanguage(Guild guild){
         Main.getMySql().insertInto(guild , "Language_DE", "messageName", "JoinMessageTemplate", "messageName,messageContent", "'JoinMessageTemplate' , '!'");
         Main.getMySql().insertInto(guild , "Language_DE", "messageName", "JoinMessageImage", "messageName,messageContent", "'JoinMessageImage' , '!'");//Server/User/Custom-url
@@ -33,6 +34,7 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Language_DE", "messageName", "WarnMessageTemplate", "messageName,messageContent", "'WarnMessageTemplate' , '!'");
         Main.getMySql().insertInto(guild , "Language_DE", "messageName", "KickMessageTemplate", "messageName,messageContent", "'KickMessageTemplate' , '!'");
         Main.getMySql().insertInto(guild , "Language_DE", "messageName", "BanMessageTemplate", "messageName,messageContent", "'BanMessageTemplate' , '!'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "UserInfoMessageTemplate", "messageName,messageContent", "'UserInfoMessageTemplate' , '**UserInfo**\n\nName: **{userName}**\nNickName: **{nickName}**\nStatus: **{status}**\nBeigetreten: **{joindAt}**\n\nRoles:\n**{roles}**\n---------------------------\n\nLevel: **{level}**\nLikes: **{likes}**\nWarns: **{warns}**'");
 
         Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Command", "messageName,messageContent", "'LogMessageTemplate_Command' , 'Der User **{username}** hat den Command **{message}** ausgeführt.'");
         Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Invite_Create", "messageName,messageContent", "'LogMessageTemplate_Invite_Create' , 'Es wurde eine neue Einladung erstellt.\\nChannel: **{channelname}**\\n'");
@@ -57,6 +59,7 @@ public class CreateDefaults {
 
     }
 
+    /** Create the Default Values for the English Language DB **/
     public void createEnglishLanguage(Guild guild){
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "JoinMessageTemplate", "messageName,messageContent", "'JoinMessageTemplate' , '!'");
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "JoinMessageImage", "messageName,messageContent", "'JoinMessageImage' , '!'");//Server/User/Custom-url
@@ -66,6 +69,7 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "WarnMessageTemplate", "messageName,messageContent", "'WarnMessageTemplate' , '!'");
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "KickMessageTemplate", "messageName,messageContent", "'KickMessageTemplate' , '!'");
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "BanMessageTemplate", "messageName,messageContent", "'BanMessageTemplate' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "UserInfoMessageTemplate", "messageName,messageContent", "'UserInfoMessageTemplate' , '**UserInfo**\n\nName: **{userName}**\nNickName: **{nickName}**\nStatus: **{status}**\nBeigetreten: **{jointAt}**\n\nRoles: **{roles}**\n---------------------------\n\nLevel: **{level}**\nLikes: **{likes}**\nWarns: **{warns}**'");
 
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Command", "messageName,messageContent", "'LogMessageTemplate_Command' , '!'");
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Invite_Create", "messageName,messageContent", "'LogMessageTemplate_Invite_Create' , '!'");
@@ -90,6 +94,7 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Channel_Create", "messageName,messageContent", "'LogMessageTemplate_Channel_Create' , '!'");
     }
 
+    /** Create the Default Values for the ServerInfo DB **/
     public void createServerInfo(Guild guild){
 
         Main.getMySql().insertInto(guild , "ServerInfo", "infoID", "ServerName", "infoID,infoContent", "'ServerName' , '-'");
@@ -103,7 +108,7 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "ServerInfo", "infoID", "BotVolume", "infoID,infoContent", "'BotVolume' , '50'");
     }
 
-    //
+    /** Create Server Warnings Template Values **/
     public void createWarningList(){
         /*
         *     RuleAbuse,
@@ -112,6 +117,7 @@ public class CreateDefaults {
     * */
     }
 
+    /** Create the Default Values for the Channel-Names DB **/
     public void createChannelNames(Guild guild){
 
         /* Enviroment */
@@ -151,12 +157,14 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "MusicTextChannel", "ChannelID,ChannelName", "'MusicTextChannel' , 'Music - Control'");
     }
 
+    /** Create the Default Values for the Server-Roles DB **/
     public void createRoles(Guild guild){
         Main.getMySql().insertInto(guild , "Roles", "RoleUse", "BotAccess", "RoleUse,Roles", "'BotAccess' , '@everyone'");
         Main.getMySql().insertInto(guild , "Roles", "RoleUse", "JoinRoles", "RoleUse,Roles", "'JoinRoles' , '-'");
         Main.getMySql().insertInto(guild , "Roles", "RoleUse", "VerifiedRole", "RoleUse,Roles", "'VerifiedRole' , 'Verified'");
     }
 
+    /** Create the Default Values for the Message Embed Color DB **/
     public void createEmbedColor(Guild guild){
         Main.getMySql().insertInto(guild , "EmbedColor", "EmbedMessage", "SelfRole_Gender", "EmbedMessage,EmbedColor", "'SelfRole_Gender' , '#be0afa'");
         Main.getMySql().insertInto(guild , "EmbedColor", "EmbedMessage", "SelfRole_Sex", "EmbedMessage,EmbedColor", "'SelfRole_Sex' , '#f50cc2'");
@@ -182,7 +190,7 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "EmbedColor", "EmbedMessage", "Ban", "EmbedMessage,EmbedColor", "'Ban' , '#ff0000'");
     }
 
-    //
+    /** Create the Default Values for the User Options DB **/
     public void createUserOptions(){
         //Language
         //PM Status
@@ -192,6 +200,7 @@ public class CreateDefaults {
         //...
     }
 
+    /** Create the Default Values for the Server ptions DB **/
     public void createServerOptions(Guild guild){
         Main.getMySql().insertInto(guild , "ServerOptions", "OptionName", "Module_JoinMessage", "OptionName,OptionState", "'Module_JoinMessage' , 'true'");
         Main.getMySql().insertInto(guild , "ServerOptions", "OptionName", "Module_LeaveMessage", "OptionName,OptionState", "'Module_LeaveMessage' , 'true'");
@@ -208,11 +217,12 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "ServerOptions", "OptionName", "DeleteCommandMessage", "OptionName,OptionState", "'DeleteCommandMessage' , 'true'");
     }
 
-    //
+    /** Create the Default Values for the Playlist DB **/
     public void createPlayList(){
         //Playlist - Lied Name, URL
     }
 
+    /** Create the Default Values for the Emoji DB to use in Self-Role **/
     public void createEmoji(Guild guild){
 
         /* Enviroment */

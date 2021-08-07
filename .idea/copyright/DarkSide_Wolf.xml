@@ -1,0 +1,6 @@
+<component name="CopyrightManager">
+  <copyright>
+    <option name="notice" value="Copyright (c) &amp;#36;originalComment.match(&quot;Copyright \(c\) (\d+)&quot;, 1, &quot;-&quot;)&amp;#36;today.year All rights reserved to&#10;@author Jason Hoffmann&#10;NickName: DarkSide_Wolf&#10;Websides:&#10;https://darkwolfcraft.net/&#10;https://zeroworks.de/&#10;https://jasonjt.de/" />
+    <option name="myName" value="DarkSide_Wolf" />
+  </copyright>
+</component>

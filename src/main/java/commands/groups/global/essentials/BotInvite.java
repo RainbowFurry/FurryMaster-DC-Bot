@@ -30,7 +30,7 @@ public class BotInvite implements Command {
         embedBuilder.setContent("https://discord.com/api/oauth2/authorize?client_id=871409125521772596&permissions=8&scope=bot");
 
         PrivateMessageBuilder privateMessageBuilder = new PrivateMessageBuilder();
-        privateMessageBuilder.sentPrivateMessage(event.getMember(), embedBuilder.build());
+        privateMessageBuilder.sentPrivateEmbedMessage(event.getMember(), embedBuilder.build());
 
     }
 

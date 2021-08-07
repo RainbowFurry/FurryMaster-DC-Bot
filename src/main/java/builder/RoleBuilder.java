@@ -17,27 +17,33 @@ public class RoleBuilder {
 
     private RoleAction roleAction;
 
+    /** Initialize RoleBuilder **/
     public RoleBuilder(Guild guild){
         roleAction = guild.createRole();
     }
 
+    /** Set the Name of the Role **/
     public void setName(String name){
         roleAction = roleAction.setName(name);
     }
 
+    /** Add all Permissions for the Role **/
     public void setPermission(Permission... permissions){
         roleAction = roleAction.setPermissions(permissions);
     }
 
+    /** Set the Color of the Role **/
     public void setColor(Color color){
         roleAction = roleAction.setColor(color);
     }
 
+    /** Set the Mentionable Status of the Role **/
     public void setMentionable(boolean mentionable){
         roleAction = roleAction.setMentionable(mentionable);
     }
 
-    public Role build(){
+    /** Create the Role **/
+    public Role create(){
         return roleAction.complete();
     }
 
