@@ -13,5 +13,10 @@ public class PlaceHolder {
     public static String UserName = "{username}";
     public static String MentionUser = "{@user}";
     public static String ChannelName = "{channel}";
+    public static String Command = "{command}";
+    public static String Message = "{message}";
+    public static String New = "{new}";
+    public static String Old = "{old}";
+    public static String Time = "{time}";
 
 }

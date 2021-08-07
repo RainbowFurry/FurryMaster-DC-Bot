@@ -33,6 +33,28 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Language_DE", "messageName", "WarnMessageTemplate", "messageName,messageContent", "'WarnMessageTemplate' , '!'");
         Main.getMySql().insertInto(guild , "Language_DE", "messageName", "KickMessageTemplate", "messageName,messageContent", "'KickMessageTemplate' , '!'");
         Main.getMySql().insertInto(guild , "Language_DE", "messageName", "BanMessageTemplate", "messageName,messageContent", "'BanMessageTemplate' , '!'");
+
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Command", "messageName,messageContent", "'LogMessageTemplate_Command' , 'Der User **{username}** hat den Command **{message}** ausgeführt.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Invite_Create", "messageName,messageContent", "'LogMessageTemplate_Invite_Create' , 'Es wurde eine neue Einladung erstellt.\\nChannel: **{channelname}**\\n'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Invite_Delete", "messageName,messageContent", "'LogMessageTemplate_Invite_Delete' , 'Es wurde eine neue Einladung gelöscht.\\nChannel: **{channelname}**\\n'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_NickNameUpdate", "messageName,messageContent", "'LogMessageTemplate_NickNameUpdate' , 'Der User **\" + {username} ** hat seinen NickName von **{old}** auf **{new}** gesetzt.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Join", "messageName,messageContent", "'LogMessageTemplate_Join' , 'Der User **{username}** hat den Server betreten.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Leave", "messageName,messageContent", "'LogMessageTemplate_Leave' , 'Der User **{username}** hat den Server verlassen.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Message_Update", "messageName,messageContent", "'LogMessageTemplate_Message_Update' , 'Der User **{username}** hat im Channel **{channel}** die Nachricht\n**von**\n{old}\n**auf**\n{new}\ngeändert.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Message_Delete", "messageName,messageContent", "'LogMessageTemplate_Message_Delete' , 'Der User **{username}** hat im Channel **{channel}** die Nachricht\n{message}\ngelöscht.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Message_Create", "messageName,messageContent", "'LogMessageTemplate_Message_Create' , '-'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Role_Create", "messageName,messageContent", "'LogMessageTemplate_Role_Create' , 'Es wurde eine neue Rolle erstellt: **{role}**.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Role_UpdateName", "messageName,messageContent", "'LogMessageTemplate_Role_UpdateName' , 'Die Rolle **{old}** wurde umbenannt in **{new}**.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Role_UpdateColor", "messageName,messageContent", "'LogMessageTemplate_Role_UpdateColor' , 'Die Farbe der Rolle **{role}** wurde von **{old}** auf **{new}** geändert.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Role_Delete", "messageName,messageContent", "'LogMessageTemplate_Role_Delete' , 'Es wurde eine Rolle gelöscht: **{role}**.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Role_UpdatePermission", "messageName,messageContent", "'LogMessageTemplate_Role_UpdatePermission' , 'Die Rechte der Rolle **{role}** wurden von **{old}** auf **{new}** geändert.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Role_UpdatePosition", "messageName,messageContent", "'LogMessageTemplate_Role_UpdatePosition' , 'Die Position der Rolle **{role}** wurde von **{old}** auf **{new}** geändert.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Role_UpdateMention", "messageName,messageContent", "'LogMessageTemplate_Role_UpdateMention' , 'Die Rolle **{role}** darf erwähnt werden: **{status}**.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Channel_UpdateName", "messageName,messageContent", "'LogMessageTemplate_Channel_UpdateName' , 'Der Channel **{old}** vom Typen **{type}** heißt nun **{new}**.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Channel_Delete", "messageName,messageContent", "'LogMessageTemplate_Channel_Delete' , 'Der Channel **{old}** vom Typen **{type}** wurde gelöscht.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Channel_UpdatePermission", "messageName,messageContent", "'LogMessageTemplate_Channel_UpdatePermission' , 'Der Channel **{channel}** hat die Berechtigungen\n**von**\n{old}\n**auf**\n{new}\ngeändert.'");
+        Main.getMySql().insertInto(guild , "Language_DE", "messageName", "LogMessageTemplate_Channel_Create", "messageName,messageContent", "'LogMessageTemplate_Channel_Create' , 'Der Channel **{channel}** vom Typen **{type}** wurde erstellt.'");
+
     }
 
     public void createEnglishLanguage(Guild guild){
@@ -44,6 +66,28 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "WarnMessageTemplate", "messageName,messageContent", "'WarnMessageTemplate' , '!'");
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "KickMessageTemplate", "messageName,messageContent", "'KickMessageTemplate' , '!'");
         Main.getMySql().insertInto(guild , "Language_EN", "messageName", "BanMessageTemplate", "messageName,messageContent", "'BanMessageTemplate' , '!'");
+
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Command", "messageName,messageContent", "'LogMessageTemplate_Command' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Invite_Create", "messageName,messageContent", "'LogMessageTemplate_Invite_Create' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Invite_Delete", "messageName,messageContent", "'LogMessageTemplate_Invite_Delete' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_NickNameUpdate", "messageName,messageContent", "'LogMessageTemplate_NickNameUpdate' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Join", "messageName,messageContent", "'LogMessageTemplate_Join' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Leave", "messageName,messageContent", "'LogMessageTemplate_Leave' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Message_Update", "messageName,messageContent", "'LogMessageTemplate_Message_Update' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Message_Delete", "messageName,messageContent", "'LogMessageTemplate_Message_Delete' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Message_Delete", "messageName,messageContent", "'LogMessageTemplate_Message_Delete' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Message_Create", "messageName,messageContent", "'LogMessageTemplate_Message_Create' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Role_Create", "messageName,messageContent", "'LogMessageTemplate_Role_Create' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Role_UpdateName", "messageName,messageContent", "'LogMessageTemplate_Role_UpdateName' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Role_UpdateColor", "messageName,messageContent", "'LogMessageTemplate_Role_UpdateColor' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Role_Delete", "messageName,messageContent", "'LogMessageTemplate_Role_Delete' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Role_UpdatePermission", "messageName,messageContent", "'LogMessageTemplate_Role_UpdatePermission' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Role_UpdatePosition", "messageName,messageContent", "'LogMessageTemplate_Role_UpdatePosition' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Role_UpdateMention", "messageName,messageContent", "'LogMessageTemplate_Role_UpdateMention' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Channel_UpdateName", "messageName,messageContent", "'LogMessageTemplate_Channel_UpdateName' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Channel_Delete", "messageName,messageContent", "'LogMessageTemplate_Channel_Delete' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Channel_UpdatePermission", "messageName,messageContent", "'LogMessageTemplate_Channel_UpdatePermission' , '!'");
+        Main.getMySql().insertInto(guild , "Language_EN", "messageName", "LogMessageTemplate_Channel_Create", "messageName,messageContent", "'LogMessageTemplate_Channel_Create' , '!'");
     }
 
     public void createServerInfo(Guild guild){
@@ -75,6 +119,8 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "UserBotControlChannel", "ChannelID,ChannelName", "'UserBotControlChannel' , 'user-bot-control'");
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "AdminBotControlChannel", "ChannelID,ChannelName", "'AdminBotControlChannel' , 'admin-bot-control'");
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "VerifyChannel", "ChannelID,ChannelName", "'VerifyChannel' , 'verify'");
+        Main.getMySql().insertInto(guild , "Channels", "ChannelID", "JoinChannel", "ChannelID,ChannelName", "'JoinChannel' , 'welcome'");
+        Main.getMySql().insertInto(guild , "Channels", "ChannelID", "LeaveChannel", "ChannelID,ChannelName", "'LeaveChannel' , 'leave-message'");
 
         /* Log */
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "Log", "ChannelID,ChannelName", "'Log' , 'log'");
@@ -84,7 +130,9 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "LeaveLog", "ChannelID,ChannelName", "'LeaveLog' , 'leave-log'");
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "InviteLog", "ChannelID,ChannelName", "'InviteLog' , 'invite-log'");
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "RoleLog", "ChannelID,ChannelName", "'RoleLog' , 'role-log'");
-        Main.getMySql().insertInto(guild , "Channels", "ChannelID", "RoleLog", "ChannelID,ChannelName", "'MessageLog' , 'message-log'");
+        Main.getMySql().insertInto(guild , "Channels", "ChannelID", "MessageLog", "ChannelID,ChannelName", "'MessageLog' , 'message-log'");
+        Main.getMySql().insertInto(guild , "Channels", "ChannelID", "CommandLog", "ChannelID,ChannelName", "'CommandLog' , 'command-log'");
+        Main.getMySql().insertInto(guild , "Channels", "ChannelID", "NickNameLog", "ChannelID,ChannelName", "'NickNameLog' , 'nick-name-log'");
 
         /* Stats */
         Main.getMySql().insertInto(guild , "Channels", "ChannelID", "OnlineMembersStats", "ChannelID,ChannelName", "'OnlineMembersStats' , 'Online Members: {amount}'");
@@ -151,6 +199,8 @@ public class CreateDefaults {
         Main.getMySql().insertInto(guild , "ServerOptions", "OptionName", "Module_JoinRank", "OptionName,OptionState", "'Module_JoinRank' , 'true'");
         Main.getMySql().insertInto(guild , "ServerOptions", "OptionName", "Module_Warn", "OptionName,OptionState", "'Module_Warn' , 'true'");
         Main.getMySql().insertInto(guild , "ServerOptions", "OptionName", "Module_ChatProtect", "OptionName,OptionState", "'Module_ChatProtect' , 'true'");//chat filter, Spamm protection
+        Main.getMySql().insertInto(guild , "ServerOptions", "OptionName", "Module_Stats", "OptionName,OptionState", "'Module_Stats' , 'true'");
+        Main.getMySql().insertInto(guild , "ServerOptions", "OptionName", "Module_Log", "OptionName,OptionState", "'Module_Log' , 'true'");
 
 
         Main.getMySql().insertInto(guild , "ServerOptions", "OptionName", "ServerLanguage", "OptionName,OptionState", "'ServerLanguage' , 'EN'");

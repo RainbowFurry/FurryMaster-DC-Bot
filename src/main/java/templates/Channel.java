@@ -46,6 +46,8 @@ public class Channel {
             guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "InviteLog", "ChannelName")).queue();
             guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "RoleLog", "ChannelName")).queue();
             guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "MessageLog", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "InviteLog", "ChannelName")).queue();
+            guild.createTextChannel((String) Main.getMySql().getObject(guild, "Channels", "ChannelID", "NickNameLog", "ChannelName")).queue();
         }
     }
 

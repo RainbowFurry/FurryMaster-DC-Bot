@@ -1,5 +1,8 @@
 package listener.log;
 
+import builder.MessageBuilder;
+import core.Main;
+import manager.Checker;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -18,14 +21,22 @@ public class GuildJoinLogListener extends ListenerAdapter {
     @Override
     public void onGuildMemberJoin(GuildMemberJoinEvent event) {
 
-        //if enabeled
+        //Module Check
+        if (Main.getMySql().getObject(event.getGuild(), "ServerOptions", "OptionName", "Module_Log", "OptionState").equals("true")) {
+            //Channel Check
+            if (event.getGuild().getTextChannelsByName((String) Main.getMySql().getObject(event.getGuild(), "Channels", "ChannelID", "JoinLog", "ChannelName"), false).get(0) != null) {
 
-        EmbedBuilder eb = new EmbedBuilder();
-        eb.setColor(Color.green);
-        eb.setDescription("Title" + "\n" +
-                "Welcome **" + event.getMember().getEffectiveName() + "** to **" + event.getGuild().getName() + "**.");
+                MessageBuilder messageBuilder = new MessageBuilder((String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "LogMessageTemplate_Join", "messageContent"));
+                String message = messageBuilder.build();
 
-        Objects.requireNonNull(event.getGuild().getDefaultChannel()).sendMessage(eb.build()).queue();
+                EmbedBuilder eb = new EmbedBuilder();
+                eb.setColor(Color.green);
+                eb.setDescription(message);
+
+                Objects.requireNonNull(event.getGuild().getDefaultChannel()).sendMessage(eb.build()).queue();
+            }
+
+        }
     }
 
 }

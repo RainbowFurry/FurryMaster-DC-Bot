@@ -49,7 +49,19 @@ public class Checker {
         }
     }
 
+    private boolean checkModuleAndChannel(Guild guild, String module, String channel) {
+        //Module Check
+        if (module.equals("true")) {
+            //Channel Check
+            if (guild.getTextChannelsByName(channel, false).get(0) != null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     /*
+    check channel/module - singel
     * check verified
     * check channel
     * check role

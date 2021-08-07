@@ -13,6 +13,7 @@ import database.sql.CreateDefaults;
 import listener.chatreaction.role.*;
 import listener.essentials.*;
 
+import listener.log.*;
 import listener.module.JoinRoleListener;
 import listener.module.SentJoinMessageListener;
 import listener.module.SentLeaveMessageListener;
@@ -119,11 +120,14 @@ public class Main {
         jda.addEventListener(new JoinRoleListener());//Handle Join Role
 
         /* Log */
-        //jda.addEventListener(new GuildJoinLogListener());//Log User Join
-        //jda.addEventListener(new GuildLeaveLogListener());//Log User Leave
-        //jda.addEventListener(new ChannelLogListener());//Log Channel Create/Delete/Edit
-        //jda.addEventListener(new MessageLogListener());//Log Message Update/Delete
-        //jda.addEventListener(new CommandLogListener());//Log Command executed
+        jda.addEventListener(new GuildJoinLogListener());//Log User Join
+        jda.addEventListener(new GuildLeaveLogListener());//Log User Leave
+        jda.addEventListener(new ChannelLogListener());//Log Channel Create/Delete/Edit
+        jda.addEventListener(new MessageLogListener());//Log Message Update/Delete
+        jda.addEventListener(new CommandLogListener());//Log Command executed
+        jda.addEventListener(new InviteLogListener());//Log new Invites created
+        jda.addEventListener(new NickNameLogListener());//Log User NickName change
+        jda.addEventListener(new RoleLogListener());//Log Role
 
         /* Stats */
         //jda.addEventListener(new OnlineMembersStatsListener());//

@@ -1,27 +1,25 @@
 ToDo:
 
 Today:
-selfrole create all + listener
-create user dbs for user already on server... + new
+join/leave message db... / joinrole
+private join/leave message
 
 recreate db ich + adrian - all
-self role FERTIG + create Roles + protect singele/multiple
 
-show logs
+
 show stats
-
-private join/leave message
-//bot id muss für invite mit gespeichert werden...
+all listener uptime/support/
 ---------------------------------------------
 Else:
-all commands
-all listener
+all commands - alle existierende
 
 builder...
 check... api
 
+create user dbs for user already on server... + new
 on guild join get owner and send pm to setup... - setup command erstellt setup channel und delete after done... language, prefix, modules, create defaults,
 if db not exist - weil bot restart beim join sicherung...
+//bot id muss für invite mit gespeichert werden...
 --------------------------------------
 Commands:
 music - auto join music channel option true/false, Channelname, ...
@@ -31,18 +29,21 @@ nick - autocheck/selfcheck/einfach so
 google/yt
 rainbow rank - rainbow, gay, bi, custom
 rock paper sisses, dice, miesmuschel, jokes, etc...
-
 Chat Filer system
 kick/ban - command
 warn systemmodule - Spam, custom, etc... - command + module self
 mute command + Module
 giveaway
 level system Module
-Auto Clean Module -> halte channel sauber und lösche inhalt alle xyz?
 setup
 
+
+geht alles?
+Auto Clean Module -> halte channel sauber und lösche inhalt alle xyz?
 manual verification/auto verification/none -> verification 18+ for nsfw?
 role selection - selfrole 1 oder category channel?
+
+self role FERTIG + create Roles + protect singele/multiple
 
 pw protect - unlock channel
 nick force - real name
@@ -68,7 +69,10 @@ Bot: Modules, language, etc
 //member = guilde
 //user = account
 
+//eigener bot möglich kostet... - oder funktionen oder beides
 
+
+alles noch mal drüber schauen
 ALLES ZWISCHENSPEICHERN/HASHEN...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 check all commands/listener if channel and permissions etc. right + module pm etc enabled
 exeption log - own server? - logfile - sout

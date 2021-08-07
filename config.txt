@@ -1,0 +1,9 @@
+#Thu Aug 05 00:52:33 CEST 2021
+activityText=der Furry Community zu
+activityType=WATCHING
+token=ODcxNDA5MTI1NTIxNzcyNTk2.YQa4_Q.VOyV5Snul0xKGLm3otHFqEFD1UY
+DB_Host=darkwolfcraft.net
+DB_Database=FurryMaster
+DB_Port=3306
+DB_UserName=discord
+DB_Password=Lands_at_the_sea

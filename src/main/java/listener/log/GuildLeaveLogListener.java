@@ -1,5 +1,8 @@
 package listener.log;
 
+import builder.MessageBuilder;
+import core.Main;
+import manager.Checker;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.PrivateChannel;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberLeaveEvent;
@@ -16,20 +19,27 @@ import java.awt.*;
 public class GuildLeaveLogListener extends ListenerAdapter {
 
     @Override
-    public void onGuildMemberLeave(GuildMemberLeaveEvent event){
+    public void onGuildMemberLeave(GuildMemberLeaveEvent event) {
 
-        //if enabeled
+        //Module Check
+        if (Main.getMySql().getObject(event.getGuild(), "ServerOptions", "OptionName", "Module_Log", "OptionState").equals("true")) {
+            //Channel Check
+            if (event.getGuild().getTextChannelsByName((String) Main.getMySql().getObject(event.getGuild(), "Channels", "ChannelID", "LeaveLog", "ChannelName"), false).get(0) != null) {
 
-        EmbedBuilder eb1 = new EmbedBuilder();
-        eb1.setColor(Color.green);
-        eb1.setDescription("Title" +
-                "Sad that you **" + event.getMember().getNickname() + "** leave us on **" + event.getGuild().getName() + "**!"
-                + "We hope you come back soon");
+                MessageBuilder messageBuilder = new MessageBuilder((String) Main.getMySql().getObject(event.getGuild(), Checker.checkServerLanguage(event.getGuild()), "messageName", "LogMessageTemplate_Leave", "messageContent"));
+                String message = messageBuilder.build();
 
-        PrivateChannel pc = event.getMember().getUser().openPrivateChannel().complete();
-        pc.sendMessage(eb1.build()
-        ).queue();
+                EmbedBuilder eb1 = new EmbedBuilder();
+                eb1.setColor(Color.green);
+                eb1.setDescription(message);
 
+                PrivateChannel pc = event.getMember().getUser().openPrivateChannel().complete();
+                pc.sendMessage(eb1.build()
+                ).queue();
+
+            }
+
+        }
     }
 
 }
